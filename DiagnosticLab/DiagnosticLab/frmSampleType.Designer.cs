@@ -226,14 +226,15 @@
             // 
             this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sampleTypeBindingSource, "Description", true));
             this.descriptionTextBox.Location = new System.Drawing.Point(200, 140);
+            this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
-            this.descriptionTextBox.Size = new System.Drawing.Size(161, 22);
+            this.descriptionTextBox.Size = new System.Drawing.Size(161, 85);
             this.descriptionTextBox.TabIndex = 2;
             // 
             // storageTemperatureLabel
             // 
             storageTemperatureLabel.AutoSize = true;
-            storageTemperatureLabel.Location = new System.Drawing.Point(51, 171);
+            storageTemperatureLabel.Location = new System.Drawing.Point(51, 234);
             storageTemperatureLabel.Name = "storageTemperatureLabel";
             storageTemperatureLabel.Size = new System.Drawing.Size(139, 16);
             storageTemperatureLabel.TabIndex = 3;
@@ -242,7 +243,7 @@
             // storageTemperatureTextBox
             // 
             this.storageTemperatureTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sampleTypeBindingSource, "StorageTemperature", true));
-            this.storageTemperatureTextBox.Location = new System.Drawing.Point(200, 168);
+            this.storageTemperatureTextBox.Location = new System.Drawing.Point(200, 231);
             this.storageTemperatureTextBox.Name = "storageTemperatureTextBox";
             this.storageTemperatureTextBox.Size = new System.Drawing.Size(161, 22);
             this.storageTemperatureTextBox.TabIndex = 4;
@@ -250,7 +251,7 @@
             // maxHoldingTimeHrsLabel
             // 
             maxHoldingTimeHrsLabel.AutoSize = true;
-            maxHoldingTimeHrsLabel.Location = new System.Drawing.Point(51, 199);
+            maxHoldingTimeHrsLabel.Location = new System.Drawing.Point(51, 262);
             maxHoldingTimeHrsLabel.Name = "maxHoldingTimeHrsLabel";
             maxHoldingTimeHrsLabel.Size = new System.Drawing.Size(143, 16);
             maxHoldingTimeHrsLabel.TabIndex = 5;
@@ -259,7 +260,7 @@
             // maxHoldingTimeHrsTextBox
             // 
             this.maxHoldingTimeHrsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sampleTypeBindingSource, "MaxHoldingTimeHrs", true));
-            this.maxHoldingTimeHrsTextBox.Location = new System.Drawing.Point(200, 196);
+            this.maxHoldingTimeHrsTextBox.Location = new System.Drawing.Point(200, 259);
             this.maxHoldingTimeHrsTextBox.Name = "maxHoldingTimeHrsTextBox";
             this.maxHoldingTimeHrsTextBox.Size = new System.Drawing.Size(161, 22);
             this.maxHoldingTimeHrsTextBox.TabIndex = 6;
@@ -267,7 +268,7 @@
             // containerTypeLabel
             // 
             containerTypeLabel.AutoSize = true;
-            containerTypeLabel.Location = new System.Drawing.Point(51, 227);
+            containerTypeLabel.Location = new System.Drawing.Point(51, 290);
             containerTypeLabel.Name = "containerTypeLabel";
             containerTypeLabel.Size = new System.Drawing.Size(102, 16);
             containerTypeLabel.TabIndex = 7;
@@ -276,7 +277,7 @@
             // containerTypeTextBox
             // 
             this.containerTypeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sampleTypeBindingSource, "ContainerType", true));
-            this.containerTypeTextBox.Location = new System.Drawing.Point(200, 224);
+            this.containerTypeTextBox.Location = new System.Drawing.Point(200, 287);
             this.containerTypeTextBox.Name = "containerTypeTextBox";
             this.containerTypeTextBox.Size = new System.Drawing.Size(161, 22);
             this.containerTypeTextBox.TabIndex = 8;
