@@ -70,18 +70,21 @@
             this.testTToolStripMenuItem.Name = "testTToolStripMenuItem";
             this.testTToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.testTToolStripMenuItem.Text = "TestType";
+            this.testTToolStripMenuItem.Click += new System.EventHandler(this.testTypeToolStripMenuItem_Click);
             // 
             // technicianToolStripMenuItem
             // 
             this.technicianToolStripMenuItem.Name = "technicianToolStripMenuItem";
             this.technicianToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.technicianToolStripMenuItem.Text = "Technician";
+            this.technicianToolStripMenuItem.Click += new System.EventHandler(this.technicianToolStripMenuItem_Click);
             // 
             // sampleTypeToolStripMenuItem
             // 
             this.sampleTypeToolStripMenuItem.Name = "sampleTypeToolStripMenuItem";
             this.sampleTypeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.sampleTypeToolStripMenuItem.Text = "SampleType";
+            this.sampleTypeToolStripMenuItem.Click += new System.EventHandler(this.sampleTypeToolStripMenuItem_Click);
             // 
             // MainForm
             // 

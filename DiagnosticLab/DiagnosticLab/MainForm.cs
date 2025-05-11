@@ -16,5 +16,26 @@ namespace DiagnosticLab
         {
             InitializeComponent();
         }
+
+        private void testTypeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmTestType();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void technicianToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmTechnician();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void sampleTypeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmSampleType();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }
