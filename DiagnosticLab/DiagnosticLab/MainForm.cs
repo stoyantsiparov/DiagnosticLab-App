@@ -37,5 +37,26 @@ namespace DiagnosticLab
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void testTypeToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            var frm = new frmTestTypeList();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void technicianToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var frm = new frmTechnicianList();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void sampleTypeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var frm = new frmSampleTypeList();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

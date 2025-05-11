@@ -57,17 +57,35 @@
     <Compile Include="frmSampleType.Designer.cs">
       <DependentUpon>frmSampleType.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSampleTypeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSampleTypeList.Designer.cs">
+      <DependentUpon>frmSampleTypeList.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTechnician.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTechnician.Designer.cs">
       <DependentUpon>frmTechnician.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTechnicianList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTechnicianList.Designer.cs">
+      <DependentUpon>frmTechnicianList.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTestType.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTestType.Designer.cs">
       <DependentUpon>frmTestType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTestTypeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTestTypeList.Designer.cs">
+      <DependentUpon>frmTestTypeList.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
