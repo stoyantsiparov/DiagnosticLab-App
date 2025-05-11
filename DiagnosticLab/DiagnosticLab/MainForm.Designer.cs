@@ -34,6 +34,9 @@
             this.testTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.technicianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sampleTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.technicianToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.sampleTypeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +64,10 @@
             // 
             // listToolStripMenuItem
             // 
+            this.listToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.testTypeToolStripMenuItem,
+            this.technicianToolStripMenuItem1,
+            this.sampleTypeToolStripMenuItem1});
             this.listToolStripMenuItem.Name = "listToolStripMenuItem";
             this.listToolStripMenuItem.Size = new System.Drawing.Size(45, 24);
             this.listToolStripMenuItem.Text = "List";
@@ -85,6 +92,24 @@
             this.sampleTypeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.sampleTypeToolStripMenuItem.Text = "SampleType";
             this.sampleTypeToolStripMenuItem.Click += new System.EventHandler(this.sampleTypeToolStripMenuItem_Click);
+            // 
+            // testTypeToolStripMenuItem
+            // 
+            this.testTypeToolStripMenuItem.Name = "testTypeToolStripMenuItem";
+            this.testTypeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.testTypeToolStripMenuItem.Text = "TestType";
+            // 
+            // technicianToolStripMenuItem1
+            // 
+            this.technicianToolStripMenuItem1.Name = "technicianToolStripMenuItem1";
+            this.technicianToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.technicianToolStripMenuItem1.Text = "Technician";
+            // 
+            // sampleTypeToolStripMenuItem1
+            // 
+            this.sampleTypeToolStripMenuItem1.Name = "sampleTypeToolStripMenuItem1";
+            this.sampleTypeToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.sampleTypeToolStripMenuItem1.Text = "SampleType";
             // 
             // MainForm
             // 
@@ -111,5 +136,8 @@
         private System.Windows.Forms.ToolStripMenuItem technicianToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sampleTypeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testTypeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem technicianToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem sampleTypeToolStripMenuItem1;
     }
 }
