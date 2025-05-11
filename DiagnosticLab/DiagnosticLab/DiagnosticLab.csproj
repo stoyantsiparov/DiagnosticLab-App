@@ -98,11 +98,20 @@
     <EmbeddedResource Include="frmSampleType.resx">
       <DependentUpon>frmSampleType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSampleTypeList.resx">
+      <DependentUpon>frmSampleTypeList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTechnician.resx">
       <DependentUpon>frmTechnician.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTechnicianList.resx">
+      <DependentUpon>frmTechnicianList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTestType.resx">
       <DependentUpon>frmTestType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTestTypeList.resx">
+      <DependentUpon>frmTestTypeList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

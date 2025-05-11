@@ -30,10 +30,10 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.supportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.technicianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sampleTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.technicianToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sampleTypeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,6 +62,27 @@
             this.supportToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.supportToolStripMenuItem.Text = "Support";
             // 
+            // testTToolStripMenuItem
+            // 
+            this.testTToolStripMenuItem.Name = "testTToolStripMenuItem";
+            this.testTToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.testTToolStripMenuItem.Text = "TestType";
+            this.testTToolStripMenuItem.Click += new System.EventHandler(this.testTypeToolStripMenuItem_Click);
+            // 
+            // technicianToolStripMenuItem
+            // 
+            this.technicianToolStripMenuItem.Name = "technicianToolStripMenuItem";
+            this.technicianToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.technicianToolStripMenuItem.Text = "Technician";
+            this.technicianToolStripMenuItem.Click += new System.EventHandler(this.technicianToolStripMenuItem_Click);
+            // 
+            // sampleTypeToolStripMenuItem
+            // 
+            this.sampleTypeToolStripMenuItem.Name = "sampleTypeToolStripMenuItem";
+            this.sampleTypeToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.sampleTypeToolStripMenuItem.Text = "SampleType";
+            this.sampleTypeToolStripMenuItem.Click += new System.EventHandler(this.sampleTypeToolStripMenuItem_Click);
+            // 
             // listToolStripMenuItem
             // 
             this.listToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -69,29 +90,8 @@
             this.technicianToolStripMenuItem1,
             this.sampleTypeToolStripMenuItem1});
             this.listToolStripMenuItem.Name = "listToolStripMenuItem";
-            this.listToolStripMenuItem.Size = new System.Drawing.Size(45, 24);
-            this.listToolStripMenuItem.Text = "List";
-            // 
-            // testTToolStripMenuItem
-            // 
-            this.testTToolStripMenuItem.Name = "testTToolStripMenuItem";
-            this.testTToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.testTToolStripMenuItem.Text = "TestType";
-            this.testTToolStripMenuItem.Click += new System.EventHandler(this.testTypeToolStripMenuItem_Click);
-            // 
-            // technicianToolStripMenuItem
-            // 
-            this.technicianToolStripMenuItem.Name = "technicianToolStripMenuItem";
-            this.technicianToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.technicianToolStripMenuItem.Text = "Technician";
-            this.technicianToolStripMenuItem.Click += new System.EventHandler(this.technicianToolStripMenuItem_Click);
-            // 
-            // sampleTypeToolStripMenuItem
-            // 
-            this.sampleTypeToolStripMenuItem.Name = "sampleTypeToolStripMenuItem";
-            this.sampleTypeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.sampleTypeToolStripMenuItem.Text = "SampleType";
-            this.sampleTypeToolStripMenuItem.Click += new System.EventHandler(this.sampleTypeToolStripMenuItem_Click);
+            this.listToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
+            this.listToolStripMenuItem.Text = "Lists";
             // 
             // testTypeToolStripMenuItem
             // 
