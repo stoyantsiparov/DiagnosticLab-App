@@ -79,6 +79,7 @@ namespace DiagnosticLab
                 MessageBox.Show("Няма избран ред за запис.", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
         private void LoadTechnicians()
         {
             DataTable dt = new DataTable();

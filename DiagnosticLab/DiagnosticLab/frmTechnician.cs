@@ -19,7 +19,6 @@ namespace DiagnosticLab
 
         private string connectionString = "Data Source=OMEN\\SQLEXPRESS;Initial Catalog=DiagnosticLab;Integrated Security=True;TrustServerCertificate=True";
 
-
         private void button1_Click(object sender, EventArgs e)
         {
             string firstName = firstNameTextBox.Text.Trim();
