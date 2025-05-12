@@ -32,9 +32,9 @@
             System.Windows.Forms.Label nameLabel;
             System.Windows.Forms.Label basePriceLabel;
             this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.basePriceTextBox = new System.Windows.Forms.TextBox();
             this.testTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.diagnosticLabDataSet = new DiagnosticLab.DiagnosticLabDataSet();
+            this.basePriceTextBox = new System.Windows.Forms.TextBox();
             this.testTypeTableAdapter = new DiagnosticLab.DiagnosticLabDataSetTableAdapters.TestTypeTableAdapter();
             this.tableAdapterManager = new DiagnosticLab.DiagnosticLabDataSetTableAdapters.TableAdapterManager();
             this.button1 = new System.Windows.Forms.Button();
@@ -53,14 +53,6 @@
             nameLabel.TabIndex = 1;
             nameLabel.Text = "Name:";
             // 
-            // nameTextBox
-            // 
-            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testTypeBindingSource, "Name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(128, 142);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(160, 22);
-            this.nameTextBox.TabIndex = 2;
-            // 
             // basePriceLabel
             // 
             basePriceLabel.AutoSize = true;
@@ -70,13 +62,13 @@
             basePriceLabel.TabIndex = 3;
             basePriceLabel.Text = "Base Price:";
             // 
-            // basePriceTextBox
+            // nameTextBox
             // 
-            this.basePriceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testTypeBindingSource, "BasePrice", true));
-            this.basePriceTextBox.Location = new System.Drawing.Point(128, 170);
-            this.basePriceTextBox.Name = "basePriceTextBox";
-            this.basePriceTextBox.Size = new System.Drawing.Size(160, 22);
-            this.basePriceTextBox.TabIndex = 4;
+            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testTypeBindingSource, "Name", true));
+            this.nameTextBox.Location = new System.Drawing.Point(128, 142);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(160, 22);
+            this.nameTextBox.TabIndex = 2;
             // 
             // testTypeBindingSource
             // 
@@ -87,6 +79,15 @@
             // 
             this.diagnosticLabDataSet.DataSetName = "DiagnosticLabDataSet";
             this.diagnosticLabDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // basePriceTextBox
+            // 
+            this.basePriceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testTypeBindingSource, "BasePrice", true));
+            this.basePriceTextBox.Location = new System.Drawing.Point(128, 170);
+            this.basePriceTextBox.Name = "basePriceTextBox";
+            this.basePriceTextBox.Size = new System.Drawing.Size(160, 22);
+            this.basePriceTextBox.TabIndex = 4;
+            this.basePriceTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // testTypeTableAdapter
             // 
