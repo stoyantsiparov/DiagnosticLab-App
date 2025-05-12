@@ -12,14 +12,6 @@ namespace DiagnosticLab
             InitializeComponent();
         }
 
-        private void technicianBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.technicianBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.diagnosticLabDataSet);
-
-        }
-
         private void frmTechnician_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'diagnosticLabDataSet.Technician' table. You can move, or remove it, as needed.

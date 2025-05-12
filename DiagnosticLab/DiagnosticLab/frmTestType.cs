@@ -12,14 +12,6 @@ namespace DiagnosticLab
             InitializeComponent();
         }
 
-        private void testTypeBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.testTypeBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.diagnosticLabDataSet);
-
-        }
-
         private void frmTestType_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'diagnosticLabDataSet.LabTestRecord' table. You can move, or remove it, as needed.

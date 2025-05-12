@@ -12,14 +12,6 @@ namespace DiagnosticLab
             InitializeComponent();
         }
 
-        private void sampleTypeBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.sampleTypeBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.diagnosticLabDataSet);
-
-        }
-
         private void frmSampleType_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'diagnosticLabDataSet.SampleType' table. You can move, or remove it, as needed.

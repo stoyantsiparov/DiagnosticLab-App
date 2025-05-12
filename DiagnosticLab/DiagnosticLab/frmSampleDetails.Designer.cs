@@ -58,11 +58,15 @@
             this.labTestRecordBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labTestRecordTableAdapter = new DiagnosticLab.DiagnosticLabDataSetTableAdapters.LabTestRecordTableAdapter();
             this.labTestRecordDataGridView = new System.Windows.Forms.DataGridView();
+            this.testTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.testTypeTableAdapter = new DiagnosticLab.DiagnosticLabDataSetTableAdapters.TestTypeTableAdapter();
+            this.technicianBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.technicianTableAdapter = new DiagnosticLab.DiagnosticLabDataSetTableAdapters.TechnicianTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,6 +80,8 @@
             this.sampleTypeBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.labTestRecordBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.labTestRecordDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testTypeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // diagnosticLabDataSet
@@ -97,8 +103,8 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.LabTestRecordTableAdapter = this.labTestRecordTableAdapter;
             this.tableAdapterManager.SampleTypeTableAdapter = this.sampleTypeTableAdapter;
-            this.tableAdapterManager.TechnicianTableAdapter = null;
-            this.tableAdapterManager.TestTypeTableAdapter = null;
+            this.tableAdapterManager.TechnicianTableAdapter = this.technicianTableAdapter;
+            this.tableAdapterManager.TestTypeTableAdapter = this.testTypeTableAdapter;
             this.tableAdapterManager.UpdateOrder = DiagnosticLab.DiagnosticLabDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // sampleTypeBindingNavigator
@@ -324,6 +330,24 @@
             this.labTestRecordDataGridView.Size = new System.Drawing.Size(1054, 220);
             this.labTestRecordDataGridView.TabIndex = 9;
             // 
+            // testTypeBindingSource
+            // 
+            this.testTypeBindingSource.DataMember = "TestType";
+            this.testTypeBindingSource.DataSource = this.diagnosticLabDataSet;
+            // 
+            // testTypeTableAdapter
+            // 
+            this.testTypeTableAdapter.ClearBeforeFill = true;
+            // 
+            // technicianBindingSource
+            // 
+            this.technicianBindingSource.DataMember = "Technician";
+            this.technicianBindingSource.DataSource = this.diagnosticLabDataSet;
+            // 
+            // technicianTableAdapter
+            // 
+            this.technicianTableAdapter.ClearBeforeFill = true;
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "LabTestID";
@@ -352,17 +376,27 @@
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "TestTypeID";
+            this.dataGridViewTextBoxColumn4.DataSource = this.testTypeBindingSource;
+            this.dataGridViewTextBoxColumn4.DisplayMember = "Name";
             this.dataGridViewTextBoxColumn4.HeaderText = "TestTypeID";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn4.ValueMember = "TestTypeID";
             this.dataGridViewTextBoxColumn4.Width = 125;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "TechnicianID";
+            this.dataGridViewTextBoxColumn5.DataSource = this.technicianBindingSource;
+            this.dataGridViewTextBoxColumn5.DisplayMember = "LastName";
             this.dataGridViewTextBoxColumn5.HeaderText = "TechnicianID";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn5.ValueMember = "TechnicianID";
             this.dataGridViewTextBoxColumn5.Width = 125;
             // 
             // dataGridViewTextBoxColumn6
@@ -414,6 +448,8 @@
             this.sampleTypeBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.labTestRecordBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.labTestRecordDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.testTypeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -445,11 +481,15 @@
         private System.Windows.Forms.TextBox containerTypeTextBox;
         private System.Windows.Forms.BindingSource labTestRecordBindingSource;
         private System.Windows.Forms.DataGridView labTestRecordDataGridView;
+        private DiagnosticLabDataSetTableAdapters.TestTypeTableAdapter testTypeTableAdapter;
+        private System.Windows.Forms.BindingSource testTypeBindingSource;
+        private DiagnosticLabDataSetTableAdapters.TechnicianTableAdapter technicianTableAdapter;
+        private System.Windows.Forms.BindingSource technicianBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;

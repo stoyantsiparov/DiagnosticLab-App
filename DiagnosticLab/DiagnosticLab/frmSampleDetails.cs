@@ -35,6 +35,10 @@ namespace DiagnosticLab
 
         private void frmSampleDetails_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'diagnosticLabDataSet.Technician' table. You can move, or remove it, as needed.
+            this.technicianTableAdapter.Fill(this.diagnosticLabDataSet.Technician);
+            // TODO: This line of code loads data into the 'diagnosticLabDataSet.TestType' table. You can move, or remove it, as needed.
+            this.testTypeTableAdapter.Fill(this.diagnosticLabDataSet.TestType);
             // TODO: This line of code loads data into the 'diagnosticLabDataSet.LabTestRecord' table. You can move, or remove it, as needed.
             this.labTestRecordTableAdapter.Fill(this.diagnosticLabDataSet.LabTestRecord);
             // TODO: This line of code loads data into the 'diagnosticLabDataSet.SampleType' table. You can move, or remove it, as needed.
