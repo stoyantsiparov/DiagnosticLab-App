@@ -59,9 +59,9 @@ namespace DiagnosticLab
             frm.Show();
         }
 
-        private void sampleDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void recordsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm = new frmSampleDetails();
+            var frm = new frmLabTestRecord();
             frm.MdiParent = this;
             frm.Show();
         }

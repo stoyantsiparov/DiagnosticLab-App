@@ -421,6 +421,12 @@ namespace DiagnosticLab {
             
             private global::System.Data.DataColumn columnResultSummary;
             
+            private global::System.Data.DataColumn columnTestType;
+            
+            private global::System.Data.DataColumn columnTechnician;
+            
+            private global::System.Data.DataColumn columnSample;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public LabTestRecordDataTable() {
@@ -520,6 +526,30 @@ namespace DiagnosticLab {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TestTypeColumn {
+                get {
+                    return this.columnTestType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TechnicianColumn {
+                get {
+                    return this.columnTechnician;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SampleColumn {
+                get {
+                    return this.columnSample;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -555,7 +585,7 @@ namespace DiagnosticLab {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public LabTestRecordRow AddLabTestRecordRow(string PatientName, System.DateTime TestDate, TestTypeRow parentTestTypeRowByFK__LabTestRe__TestT__3D5E1FD2, TechnicianRow parentTechnicianRowByFK__LabTestRe__Techn__3E52440B, SampleTypeRow parentSampleTypeRowByFK__LabTestRe__Sampl__3F466844, decimal FinalPrice, string ResultSummary) {
+            public LabTestRecordRow AddLabTestRecordRow(string PatientName, System.DateTime TestDate, TestTypeRow parentTestTypeRowByFK__LabTestRe__TestT__3D5E1FD2, TechnicianRow parentTechnicianRowByFK__LabTestRe__Techn__3E52440B, SampleTypeRow parentSampleTypeRowByFK__LabTestRe__Sampl__3F466844, decimal FinalPrice, string ResultSummary, string TestType, string Technician, string Sample) {
                 LabTestRecordRow rowLabTestRecordRow = ((LabTestRecordRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -565,7 +595,10 @@ namespace DiagnosticLab {
                         null,
                         null,
                         FinalPrice,
-                        ResultSummary};
+                        ResultSummary,
+                        TestType,
+                        Technician,
+                        Sample};
                 if ((parentTestTypeRowByFK__LabTestRe__TestT__3D5E1FD2 != null)) {
                     columnValuesArray[3] = parentTestTypeRowByFK__LabTestRe__TestT__3D5E1FD2[0];
                 }
@@ -612,6 +645,9 @@ namespace DiagnosticLab {
                 this.columnSampleTypeID = base.Columns["SampleTypeID"];
                 this.columnFinalPrice = base.Columns["FinalPrice"];
                 this.columnResultSummary = base.Columns["ResultSummary"];
+                this.columnTestType = base.Columns["TestType"];
+                this.columnTechnician = base.Columns["Technician"];
+                this.columnSample = base.Columns["Sample"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -633,6 +669,12 @@ namespace DiagnosticLab {
                 base.Columns.Add(this.columnFinalPrice);
                 this.columnResultSummary = new global::System.Data.DataColumn("ResultSummary", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnResultSummary);
+                this.columnTestType = new global::System.Data.DataColumn("TestType", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTestType);
+                this.columnTechnician = new global::System.Data.DataColumn("Technician", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTechnician);
+                this.columnSample = new global::System.Data.DataColumn("Sample", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSample);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnLabTestID}, true));
                 this.columnLabTestID.AutoIncrement = true;
@@ -648,6 +690,12 @@ namespace DiagnosticLab {
                 this.columnTechnicianID.AllowDBNull = false;
                 this.columnSampleTypeID.AllowDBNull = false;
                 this.columnResultSummary.MaxLength = 255;
+                this.columnTestType.AllowDBNull = false;
+                this.columnTestType.MaxLength = 100;
+                this.columnTechnician.ReadOnly = true;
+                this.columnTechnician.MaxLength = 101;
+                this.columnSample.ReadOnly = true;
+                this.columnSample.MaxLength = 553;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1812,6 +1860,49 @@ namespace DiagnosticLab {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string TestType {
+                get {
+                    return ((string)(this[this.tableLabTestRecord.TestTypeColumn]));
+                }
+                set {
+                    this[this.tableLabTestRecord.TestTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Technician {
+                get {
+                    try {
+                        return ((string)(this[this.tableLabTestRecord.TechnicianColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Technician\' in table \'LabTestRecord\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLabTestRecord.TechnicianColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Sample {
+                get {
+                    try {
+                        return ((string)(this[this.tableLabTestRecord.SampleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Sample\' in table \'LabTestRecord\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLabTestRecord.SampleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public SampleTypeRow SampleTypeRow {
                 get {
                     return ((SampleTypeRow)(this.GetParentRow(this.Table.ParentRelations["FK__LabTestRe__Sampl__3F466844"])));
@@ -1865,6 +1956,30 @@ namespace DiagnosticLab {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetResultSummaryNull() {
                 this[this.tableLabTestRecord.ResultSummaryColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTechnicianNull() {
+                return this.IsNull(this.tableLabTestRecord.TechnicianColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTechnicianNull() {
+                this[this.tableLabTestRecord.TechnicianColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSampleNull() {
+                return this.IsNull(this.tableLabTestRecord.SampleColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSampleNull() {
+                this[this.tableLabTestRecord.SampleColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2415,56 +2530,41 @@ namespace DiagnosticLab.DiagnosticLabDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("SampleTypeID", "SampleTypeID");
             tableMapping.ColumnMappings.Add("FinalPrice", "FinalPrice");
             tableMapping.ColumnMappings.Add("ResultSummary", "ResultSummary");
+            tableMapping.ColumnMappings.Add("TestType", "TestType");
+            tableMapping.ColumnMappings.Add("Technician", "Technician");
+            tableMapping.ColumnMappings.Add("Sample", "Sample");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[LabTestRecord] WHERE (([LabTestID] = @Original_LabTestID) AND ([PatientName] = @Original_PatientName) AND ([TestDate] = @Original_TestDate) AND ([TestTypeID] = @Original_TestTypeID) AND ([TechnicianID] = @Original_TechnicianID) AND ([SampleTypeID] = @Original_SampleTypeID) AND ((@IsNull_FinalPrice = 1 AND [FinalPrice] IS NULL) OR ([FinalPrice] = @Original_FinalPrice)) AND ((@IsNull_ResultSummary = 1 AND [ResultSummary] IS NULL) OR ([ResultSummary] = @Original_ResultSummary)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LabTestID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LabTestID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PatientName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PatientName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TestDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TestTypeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestTypeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TechnicianID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TechnicianID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SampleTypeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SampleTypeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FinalPrice", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FinalPrice", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FinalPrice", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "FinalPrice", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ResultSummary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ResultSummary", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ResultSummary", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ResultSummary", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.CommandText = "dbo.sp_DeleteLabTest";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LabTestID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "LabTestID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[LabTestRecord] ([PatientName], [TestDate], [TestTypeID], [TechnicianID], [SampleTypeID], [FinalPrice], [ResultSummary]) VALUES (@PatientName, @TestDate, @TestTypeID, @TechnicianID, @SampleTypeID, @FinalPrice, @ResultSummary);
-SELECT LabTestID, PatientName, TestDate, TestTypeID, TechnicianID, SampleTypeID, FinalPrice, ResultSummary FROM LabTestRecord WHERE (LabTestID = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PatientName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PatientName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestTypeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestTypeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TechnicianID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TechnicianID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SampleTypeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SampleTypeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FinalPrice", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "FinalPrice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ResultSummary", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ResultSummary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.CommandText = "dbo.sp_InsertLabTest";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PatientName", global::System.Data.SqlDbType.NVarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "PatientName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, "TestDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestTypeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "TestTypeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TechnicianID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "TechnicianID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SampleTypeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "SampleTypeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FinalPrice", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 10, 2, "FinalPrice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ResultSummary", global::System.Data.SqlDbType.NVarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "ResultSummary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[LabTestRecord] SET [PatientName] = @PatientName, [TestDate] = @TestDate, [TestTypeID] = @TestTypeID, [TechnicianID] = @TechnicianID, [SampleTypeID] = @SampleTypeID, [FinalPrice] = @FinalPrice, [ResultSummary] = @ResultSummary WHERE (([LabTestID] = @Original_LabTestID) AND ([PatientName] = @Original_PatientName) AND ([TestDate] = @Original_TestDate) AND ([TestTypeID] = @Original_TestTypeID) AND ([TechnicianID] = @Original_TechnicianID) AND ([SampleTypeID] = @Original_SampleTypeID) AND ((@IsNull_FinalPrice = 1 AND [FinalPrice] IS NULL) OR ([FinalPrice] = @Original_FinalPrice)) AND ((@IsNull_ResultSummary = 1 AND [ResultSummary] IS NULL) OR ([ResultSummary] = @Original_ResultSummary)));
-SELECT LabTestID, PatientName, TestDate, TestTypeID, TechnicianID, SampleTypeID, FinalPrice, ResultSummary FROM LabTestRecord WHERE (LabTestID = @LabTestID)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PatientName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PatientName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestTypeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestTypeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TechnicianID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TechnicianID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SampleTypeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SampleTypeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FinalPrice", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "FinalPrice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ResultSummary", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ResultSummary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LabTestID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LabTestID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PatientName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PatientName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TestDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TestTypeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TestTypeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TechnicianID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TechnicianID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SampleTypeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SampleTypeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FinalPrice", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FinalPrice", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FinalPrice", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 10, 2, "FinalPrice", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ResultSummary", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ResultSummary", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ResultSummary", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ResultSummary", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LabTestID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LabTestID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.CommandText = "dbo.sp_UpdateLabTest";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LabTestID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "LabTestID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PatientName", global::System.Data.SqlDbType.NVarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "PatientName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, "TestDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TestTypeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "TestTypeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TechnicianID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "TechnicianID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SampleTypeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, "SampleTypeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FinalPrice", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 10, 2, "FinalPrice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ResultSummary", global::System.Data.SqlDbType.NVarChar, 255, global::System.Data.ParameterDirection.Input, 0, 0, "ResultSummary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2480,9 +2580,9 @@ SELECT LabTestID, PatientName, TestDate, TestTypeID, TechnicianID, SampleTypeID,
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT LabTestID, PatientName, TestDate, TestTypeID, TechnicianID, SampleTypeID, " +
-                "FinalPrice, ResultSummary FROM dbo.LabTestRecord";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].CommandText = "dbo.sp_GetAllLabTests";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2542,33 +2642,12 @@ SELECT LabTestID, PatientName, TestDate, TestTypeID, TechnicianID, SampleTypeID,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_LabTestID, string Original_PatientName, System.DateTime Original_TestDate, int Original_TestTypeID, int Original_TechnicianID, int Original_SampleTypeID, global::System.Nullable<decimal> Original_FinalPrice, string Original_ResultSummary) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_LabTestID));
-            if ((Original_PatientName == null)) {
-                throw new global::System.ArgumentNullException("Original_PatientName");
+        public virtual int Delete(global::System.Nullable<int> LabTestID) {
+            if ((LabTestID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(LabTestID.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_PatientName));
-            }
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_TestDate));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_TestTypeID));
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_TechnicianID));
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_SampleTypeID));
-            if ((Original_FinalPrice.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((decimal)(Original_FinalPrice.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ResultSummary == null)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_ResultSummary));
+                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2590,28 +2669,48 @@ SELECT LabTestID, PatientName, TestDate, TestTypeID, TechnicianID, SampleTypeID,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string PatientName, System.DateTime TestDate, int TestTypeID, int TechnicianID, int SampleTypeID, global::System.Nullable<decimal> FinalPrice, string ResultSummary) {
+        public virtual int Insert(string PatientName, global::System.Nullable<global::System.DateTime> TestDate, global::System.Nullable<int> TestTypeID, global::System.Nullable<int> TechnicianID, global::System.Nullable<int> SampleTypeID, global::System.Nullable<decimal> FinalPrice, string ResultSummary) {
             if ((PatientName == null)) {
-                throw new global::System.ArgumentNullException("PatientName");
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(PatientName));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(PatientName));
             }
-            this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(TestDate));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(TestTypeID));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(TechnicianID));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(SampleTypeID));
-            if ((FinalPrice.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(FinalPrice.Value));
+            if ((TestDate.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(TestDate.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((TestTypeID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(TestTypeID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((TechnicianID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(TechnicianID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((SampleTypeID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(SampleTypeID.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((ResultSummary == null)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            if ((FinalPrice.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((decimal)(FinalPrice.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(ResultSummary));
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((ResultSummary == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(ResultSummary));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -2633,73 +2732,55 @@ SELECT LabTestID, PatientName, TestDate, TestTypeID, TechnicianID, SampleTypeID,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string PatientName, 
-                    System.DateTime TestDate, 
-                    int TestTypeID, 
-                    int TechnicianID, 
-                    int SampleTypeID, 
-                    global::System.Nullable<decimal> FinalPrice, 
-                    string ResultSummary, 
-                    int Original_LabTestID, 
-                    string Original_PatientName, 
-                    System.DateTime Original_TestDate, 
-                    int Original_TestTypeID, 
-                    int Original_TechnicianID, 
-                    int Original_SampleTypeID, 
-                    global::System.Nullable<decimal> Original_FinalPrice, 
-                    string Original_ResultSummary, 
-                    int LabTestID) {
-            if ((PatientName == null)) {
-                throw new global::System.ArgumentNullException("PatientName");
+        public virtual int Update(global::System.Nullable<int> LabTestID, string PatientName, global::System.Nullable<global::System.DateTime> TestDate, global::System.Nullable<int> TestTypeID, global::System.Nullable<int> TechnicianID, global::System.Nullable<int> SampleTypeID, global::System.Nullable<decimal> FinalPrice, string ResultSummary) {
+            if ((LabTestID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(LabTestID.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(PatientName));
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(TestDate));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(TestTypeID));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(TechnicianID));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(SampleTypeID));
-            if ((FinalPrice.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(FinalPrice.Value));
+            if ((PatientName == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(PatientName));
+            }
+            if ((TestDate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(TestDate.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((TestTypeID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(TestTypeID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((TechnicianID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(TechnicianID.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((ResultSummary == null)) {
+            if ((SampleTypeID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(SampleTypeID.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(ResultSummary));
-            }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_LabTestID));
-            if ((Original_PatientName == null)) {
-                throw new global::System.ArgumentNullException("Original_PatientName");
+            if ((FinalPrice.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(FinalPrice.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_PatientName));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_TestDate));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_TestTypeID));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_TechnicianID));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_SampleTypeID));
-            if ((Original_FinalPrice.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((decimal)(Original_FinalPrice.Value));
+            if ((ResultSummary == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(ResultSummary));
             }
-            if ((Original_ResultSummary == null)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_ResultSummary));
-            }
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(LabTestID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2714,14 +2795,6 @@ SELECT LabTestID, PatientName, TestDate, TestTypeID, TechnicianID, SampleTypeID,
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string PatientName, System.DateTime TestDate, int TestTypeID, int TechnicianID, int SampleTypeID, global::System.Nullable<decimal> FinalPrice, string ResultSummary, int Original_LabTestID, string Original_PatientName, System.DateTime Original_TestDate, int Original_TestTypeID, int Original_TechnicianID, int Original_SampleTypeID, global::System.Nullable<decimal> Original_FinalPrice, string Original_ResultSummary) {
-            return this.Update(PatientName, TestDate, TestTypeID, TechnicianID, SampleTypeID, FinalPrice, ResultSummary, Original_LabTestID, Original_PatientName, Original_TestDate, Original_TestTypeID, Original_TechnicianID, Original_SampleTypeID, Original_FinalPrice, Original_ResultSummary, Original_LabTestID);
         }
     }
     
