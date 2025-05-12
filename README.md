@@ -40,7 +40,7 @@ SQL stored procedures are used throughout the application:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/YOUR_USERNAME/DiagnosticLab.git
+   git clone https://github.com/stoyantsiparov/DiagnosticLab.git
    ```
 2. Open the solution file `DiagnosticLab.sln` in Visual Studio.
 3. Set up the database connection in `connectionString` located in the `.cs` files (e.g., `frmLabTestRecord.cs`, etc.).
