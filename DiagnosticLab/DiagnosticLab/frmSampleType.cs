@@ -14,8 +14,7 @@ namespace DiagnosticLab
 
         private void frmSampleType_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'diagnosticLabDataSet.SampleType' table. You can move, or remove it, as needed.
-            this.sampleTypeTableAdapter.Fill(this.diagnosticLabDataSet.SampleType);
+            this.sampleTypeBindingSource.AddNew();
 
         }
 

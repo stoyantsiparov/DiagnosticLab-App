@@ -14,9 +14,7 @@ namespace DiagnosticLab
 
         private void frmTechnician_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'diagnosticLabDataSet.Technician' table. You can move, or remove it, as needed.
-            this.technicianTableAdapter.Fill(this.diagnosticLabDataSet.Technician);
-
+            this.technicianBindingSource.AddNew();
         }
 
         private string connectionString = "Data Source=OMEN\\SQLEXPRESS;Initial Catalog=DiagnosticLab;Integrated Security=True;TrustServerCertificate=True";
