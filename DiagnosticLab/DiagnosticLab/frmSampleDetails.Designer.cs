@@ -323,11 +323,11 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
             this.labTestRecordDataGridView.DataSource = this.labTestRecordBindingSource;
-            this.labTestRecordDataGridView.Location = new System.Drawing.Point(53, 144);
+            this.labTestRecordDataGridView.Location = new System.Drawing.Point(53, 167);
             this.labTestRecordDataGridView.Name = "labTestRecordDataGridView";
             this.labTestRecordDataGridView.RowHeadersWidth = 51;
             this.labTestRecordDataGridView.RowTemplate.Height = 24;
-            this.labTestRecordDataGridView.Size = new System.Drawing.Size(1054, 220);
+            this.labTestRecordDataGridView.Size = new System.Drawing.Size(804, 220);
             this.labTestRecordDataGridView.TabIndex = 9;
             // 
             // testTypeBindingSource
@@ -355,6 +355,7 @@
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
             this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // dataGridViewTextBoxColumn2
@@ -390,7 +391,6 @@
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "TechnicianID";
             this.dataGridViewTextBoxColumn5.DataSource = this.technicianBindingSource;
-            this.dataGridViewTextBoxColumn5.DisplayMember = "LastName";
             this.dataGridViewTextBoxColumn5.HeaderText = "TechnicianID";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
@@ -405,6 +405,7 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "SampleTypeID";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Visible = false;
             this.dataGridViewTextBoxColumn6.Width = 125;
             // 
             // dataGridViewTextBoxColumn7

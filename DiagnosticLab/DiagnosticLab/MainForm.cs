@@ -58,5 +58,12 @@ namespace DiagnosticLab
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void sampleDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmSampleDetails();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

@@ -37,6 +37,8 @@
             this.testTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.technicianToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sampleTypeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.detailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sampleDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +47,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.supportToolStripMenuItem,
-            this.listToolStripMenuItem});
+            this.listToolStripMenuItem,
+            this.detailsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
@@ -114,6 +117,21 @@
             this.sampleTypeToolStripMenuItem1.Text = "SampleType";
             this.sampleTypeToolStripMenuItem1.Click += new System.EventHandler(this.sampleTypeToolStripMenuItem1_Click);
             // 
+            // detailsToolStripMenuItem
+            // 
+            this.detailsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sampleDetailsToolStripMenuItem});
+            this.detailsToolStripMenuItem.Name = "detailsToolStripMenuItem";
+            this.detailsToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
+            this.detailsToolStripMenuItem.Text = "Details";
+            // 
+            // sampleDetailsToolStripMenuItem
+            // 
+            this.sampleDetailsToolStripMenuItem.Name = "sampleDetailsToolStripMenuItem";
+            this.sampleDetailsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.sampleDetailsToolStripMenuItem.Text = "SampleTypeDetails";
+            this.sampleDetailsToolStripMenuItem.Click += new System.EventHandler(this.sampleDetailsToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -142,5 +160,7 @@
         private System.Windows.Forms.ToolStripMenuItem testTypeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem technicianToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem sampleTypeToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem detailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sampleDetailsToolStripMenuItem;
     }
 }
