@@ -53,6 +53,12 @@
             this.finalPriceTextBox = new System.Windows.Forms.TextBox();
             this.resultSummaryTextBox = new System.Windows.Forms.TextBox();
             this.labTestRecordDataGridView = new System.Windows.Forms.DataGridView();
+            this.sampleTypeTableAdapter = new DiagnosticLab.DiagnosticLabDataSetTableAdapters.SampleTypeTableAdapter();
+            this.testTypeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.testTypeBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,12 +68,6 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.sampleTypeTableAdapter = new DiagnosticLab.DiagnosticLabDataSetTableAdapters.SampleTypeTableAdapter();
-            this.testTypeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.testTypeBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             patientNameLabel = new System.Windows.Forms.Label();
             testDateLabel = new System.Windows.Forms.Label();
             testTypeIDLabel = new System.Windows.Forms.Label();
@@ -286,92 +286,6 @@
             this.labTestRecordDataGridView.TabIndex = 15;
             this.labTestRecordDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.labTestRecordDataGridView_CellClick);
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "LabTestID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "LabTestID";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "PatientName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "PatientName";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "TestDate";
-            this.dataGridViewTextBoxColumn3.HeaderText = "TestDate";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // TestTypeID
-            // 
-            this.TestTypeID.DataPropertyName = "TestTypeID";
-            this.TestTypeID.DataSource = this.testTypeBindingSource;
-            this.TestTypeID.DisplayMember = "Name";
-            this.TestTypeID.HeaderText = "TestTypeID";
-            this.TestTypeID.MinimumWidth = 6;
-            this.TestTypeID.Name = "TestTypeID";
-            this.TestTypeID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.TestTypeID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.TestTypeID.ValueMember = "TestTypeID";
-            this.TestTypeID.Width = 125;
-            // 
-            // TechnicianID
-            // 
-            this.TechnicianID.DataPropertyName = "TechnicianID";
-            this.TechnicianID.DataSource = this.technicianBindingSource;
-            this.TechnicianID.HeaderText = "TechnicianID";
-            this.TechnicianID.MinimumWidth = 6;
-            this.TechnicianID.Name = "TechnicianID";
-            this.TechnicianID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.TechnicianID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.TechnicianID.Width = 125;
-            // 
-            // SampleTypeID
-            // 
-            this.SampleTypeID.DataPropertyName = "SampleTypeID";
-            this.SampleTypeID.DataSource = this.sampleTypeBindingSource;
-            this.SampleTypeID.DisplayMember = "Description";
-            this.SampleTypeID.HeaderText = "SampleTypeID";
-            this.SampleTypeID.MinimumWidth = 6;
-            this.SampleTypeID.Name = "SampleTypeID";
-            this.SampleTypeID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.SampleTypeID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.SampleTypeID.ValueMember = "SampleTypeID";
-            this.SampleTypeID.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "FinalPrice";
-            this.dataGridViewTextBoxColumn7.HeaderText = "FinalPrice";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "ResultSummary";
-            this.dataGridViewTextBoxColumn8.HeaderText = "ResultSummary";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 125;
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Delete";
-            this.Delete.MinimumWidth = 6;
-            this.Delete.Name = "Delete";
-            this.Delete.Width = 125;
-            // 
             // sampleTypeTableAdapter
             // 
             this.sampleTypeTableAdapter.ClearBeforeFill = true;
@@ -415,6 +329,92 @@
             this.button3.Text = "Clear";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "LabTestID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "LabTestID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "PatientName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Patient Name";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "TestDate";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Test Date";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // TestTypeID
+            // 
+            this.TestTypeID.DataPropertyName = "TestTypeID";
+            this.TestTypeID.DataSource = this.testTypeBindingSource;
+            this.TestTypeID.DisplayMember = "Name";
+            this.TestTypeID.HeaderText = "Test Type ID";
+            this.TestTypeID.MinimumWidth = 6;
+            this.TestTypeID.Name = "TestTypeID";
+            this.TestTypeID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.TestTypeID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.TestTypeID.ValueMember = "TestTypeID";
+            this.TestTypeID.Width = 125;
+            // 
+            // TechnicianID
+            // 
+            this.TechnicianID.DataPropertyName = "TechnicianID";
+            this.TechnicianID.DataSource = this.technicianBindingSource;
+            this.TechnicianID.HeaderText = "Technician ID";
+            this.TechnicianID.MinimumWidth = 6;
+            this.TechnicianID.Name = "TechnicianID";
+            this.TechnicianID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.TechnicianID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.TechnicianID.Width = 125;
+            // 
+            // SampleTypeID
+            // 
+            this.SampleTypeID.DataPropertyName = "SampleTypeID";
+            this.SampleTypeID.DataSource = this.sampleTypeBindingSource;
+            this.SampleTypeID.DisplayMember = "Description";
+            this.SampleTypeID.HeaderText = "Sample Type ID";
+            this.SampleTypeID.MinimumWidth = 6;
+            this.SampleTypeID.Name = "SampleTypeID";
+            this.SampleTypeID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.SampleTypeID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.SampleTypeID.ValueMember = "SampleTypeID";
+            this.SampleTypeID.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "FinalPrice";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Final Price";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "ResultSummary";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Result Summary";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 125;
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Delete";
+            this.Delete.MinimumWidth = 6;
+            this.Delete.Name = "Delete";
+            this.Delete.Width = 125;
             // 
             // frmLabTestRecord
             // 
@@ -478,6 +478,8 @@
         private System.Windows.Forms.BindingSource testTypeBindingSource1;
         private System.Windows.Forms.BindingSource testTypeBindingSource2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -487,7 +489,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
     }
 }
