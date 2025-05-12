@@ -40,6 +40,7 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticLabDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sampleTypeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sampleTypeDataGridView)).BeginInit();
@@ -86,6 +87,7 @@
             this.sampleTypeDataGridView.RowTemplate.Height = 24;
             this.sampleTypeDataGridView.Size = new System.Drawing.Size(680, 220);
             this.sampleTypeDataGridView.TabIndex = 1;
+            this.sampleTypeDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sampleTypeDataGridView_CellClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -136,11 +138,22 @@
             this.Delete.Name = "Delete";
             this.Delete.Width = 125;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(620, 323);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(113, 38);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Save";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmSampleTypeList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.sampleTypeDataGridView);
             this.Name = "frmSampleTypeList";
             this.Text = "frmSampleTypeList";
@@ -165,5 +178,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -12,20 +12,12 @@ namespace DiagnosticLab
             InitializeComponent();
         }
 
-        private void testTypeBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.testTypeBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.diagnosticLabDataSet);
-
-        }
+        private string connectionString = "Data Source=OMEN\\SQLEXPRESS;Initial Catalog=DiagnosticLab;Integrated Security=True;TrustServerCertificate=True";
 
         private void frmTestTypeList_Load(object sender, EventArgs e)
         {
             LoadTestTypes();
         }
-
-        private string connectionString = "Data Source=OMEN\\SQLEXPRESS;Initial Catalog=DiagnosticLab;Integrated Security=True;TrustServerCertificate=True";
 
         private void testTypeDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
