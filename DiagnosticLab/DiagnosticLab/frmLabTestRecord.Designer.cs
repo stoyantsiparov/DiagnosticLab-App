@@ -67,6 +67,7 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             patientNameLabel = new System.Windows.Forms.Label();
             testDateLabel = new System.Windows.Forms.Label();
             testTypeIDLabel = new System.Windows.Forms.Label();
@@ -107,27 +108,27 @@
             testTypeIDLabel.AutoSize = true;
             testTypeIDLabel.Location = new System.Drawing.Point(15, 167);
             testTypeIDLabel.Name = "testTypeIDLabel";
-            testTypeIDLabel.Size = new System.Drawing.Size(88, 16);
+            testTypeIDLabel.Size = new System.Drawing.Size(72, 16);
             testTypeIDLabel.TabIndex = 5;
-            testTypeIDLabel.Text = "Test Type ID:";
+            testTypeIDLabel.Text = "Test Type:";
             // 
             // technicianIDLabel
             // 
             technicianIDLabel.AutoSize = true;
             technicianIDLabel.Location = new System.Drawing.Point(15, 197);
             technicianIDLabel.Name = "technicianIDLabel";
-            technicianIDLabel.Size = new System.Drawing.Size(92, 16);
+            technicianIDLabel.Size = new System.Drawing.Size(116, 16);
             technicianIDLabel.TabIndex = 7;
-            technicianIDLabel.Text = "Technician ID:";
+            technicianIDLabel.Text = "Technician Name:";
             // 
             // sampleTypeIDLabel
             // 
             sampleTypeIDLabel.AutoSize = true;
             sampleTypeIDLabel.Location = new System.Drawing.Point(15, 227);
             sampleTypeIDLabel.Name = "sampleTypeIDLabel";
-            sampleTypeIDLabel.Size = new System.Drawing.Size(108, 16);
+            sampleTypeIDLabel.Size = new System.Drawing.Size(128, 16);
             sampleTypeIDLabel.TabIndex = 9;
-            sampleTypeIDLabel.Text = "Sample Type ID:";
+            sampleTypeIDLabel.Text = "Sample Description:";
             // 
             // finalPriceLabel
             // 
@@ -181,7 +182,7 @@
             // patientNameTextBox
             // 
             this.patientNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.labTestRecordBindingSource, "PatientName", true));
-            this.patientNameTextBox.Location = new System.Drawing.Point(129, 108);
+            this.patientNameTextBox.Location = new System.Drawing.Point(159, 111);
             this.patientNameTextBox.Name = "patientNameTextBox";
             this.patientNameTextBox.Size = new System.Drawing.Size(251, 22);
             this.patientNameTextBox.TabIndex = 2;
@@ -189,7 +190,7 @@
             // testDateDateTimePicker
             // 
             this.testDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.labTestRecordBindingSource, "TestDate", true));
-            this.testDateDateTimePicker.Location = new System.Drawing.Point(129, 136);
+            this.testDateDateTimePicker.Location = new System.Drawing.Point(159, 139);
             this.testDateDateTimePicker.Name = "testDateDateTimePicker";
             this.testDateDateTimePicker.Size = new System.Drawing.Size(251, 22);
             this.testDateDateTimePicker.TabIndex = 4;
@@ -200,7 +201,7 @@
             this.testTypeIDComboBox.DataSource = this.testTypeBindingSource;
             this.testTypeIDComboBox.DisplayMember = "Name";
             this.testTypeIDComboBox.FormattingEnabled = true;
-            this.testTypeIDComboBox.Location = new System.Drawing.Point(129, 164);
+            this.testTypeIDComboBox.Location = new System.Drawing.Point(159, 167);
             this.testTypeIDComboBox.Name = "testTypeIDComboBox";
             this.testTypeIDComboBox.Size = new System.Drawing.Size(251, 24);
             this.testTypeIDComboBox.TabIndex = 6;
@@ -217,7 +218,7 @@
             this.technicianIDComboBox.DataSource = this.technicianBindingSource;
             this.technicianIDComboBox.DisplayMember = "TechnicianID";
             this.technicianIDComboBox.FormattingEnabled = true;
-            this.technicianIDComboBox.Location = new System.Drawing.Point(129, 194);
+            this.technicianIDComboBox.Location = new System.Drawing.Point(159, 197);
             this.technicianIDComboBox.Name = "technicianIDComboBox";
             this.technicianIDComboBox.Size = new System.Drawing.Size(251, 24);
             this.technicianIDComboBox.TabIndex = 8;
@@ -234,7 +235,7 @@
             this.sampleTypeIDComboBox.DataSource = this.sampleTypeBindingSource;
             this.sampleTypeIDComboBox.DisplayMember = "Description";
             this.sampleTypeIDComboBox.FormattingEnabled = true;
-            this.sampleTypeIDComboBox.Location = new System.Drawing.Point(129, 224);
+            this.sampleTypeIDComboBox.Location = new System.Drawing.Point(159, 227);
             this.sampleTypeIDComboBox.Name = "sampleTypeIDComboBox";
             this.sampleTypeIDComboBox.Size = new System.Drawing.Size(251, 24);
             this.sampleTypeIDComboBox.TabIndex = 10;
@@ -248,7 +249,7 @@
             // finalPriceTextBox
             // 
             this.finalPriceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.labTestRecordBindingSource, "FinalPrice", true));
-            this.finalPriceTextBox.Location = new System.Drawing.Point(129, 254);
+            this.finalPriceTextBox.Location = new System.Drawing.Point(159, 257);
             this.finalPriceTextBox.Name = "finalPriceTextBox";
             this.finalPriceTextBox.Size = new System.Drawing.Size(251, 22);
             this.finalPriceTextBox.TabIndex = 12;
@@ -257,7 +258,7 @@
             // resultSummaryTextBox
             // 
             this.resultSummaryTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.labTestRecordBindingSource, "ResultSummary", true));
-            this.resultSummaryTextBox.Location = new System.Drawing.Point(129, 282);
+            this.resultSummaryTextBox.Location = new System.Drawing.Point(159, 285);
             this.resultSummaryTextBox.Name = "resultSummaryTextBox";
             this.resultSummaryTextBox.Size = new System.Drawing.Size(251, 22);
             this.resultSummaryTextBox.TabIndex = 14;
@@ -277,7 +278,7 @@
             this.dataGridViewTextBoxColumn8,
             this.Delete});
             this.labTestRecordDataGridView.DataSource = this.labTestRecordBindingSource;
-            this.labTestRecordDataGridView.Location = new System.Drawing.Point(393, 108);
+            this.labTestRecordDataGridView.Location = new System.Drawing.Point(423, 111);
             this.labTestRecordDataGridView.Name = "labTestRecordDataGridView";
             this.labTestRecordDataGridView.RowHeadersWidth = 51;
             this.labTestRecordDataGridView.RowTemplate.Height = 24;
@@ -301,7 +302,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(267, 310);
+            this.button1.Location = new System.Drawing.Point(297, 313);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 30);
             this.button1.TabIndex = 16;
@@ -397,7 +398,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(393, 346);
+            this.button2.Location = new System.Drawing.Point(423, 349);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(113, 30);
             this.button2.TabIndex = 17;
@@ -405,11 +406,22 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(159, 313);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(113, 30);
+            this.button3.TabIndex = 18;
+            this.button3.Text = "Clear";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // frmLabTestRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1458, 450);
+            this.ClientSize = new System.Drawing.Size(1488, 450);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.labTestRecordDataGridView);
@@ -476,5 +488,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

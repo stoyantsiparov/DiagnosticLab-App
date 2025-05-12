@@ -57,7 +57,7 @@ namespace DiagnosticLab
             if (labTestRecordDataGridView.Columns["SampleTypeID"] is DataGridViewComboBoxColumn sampleCol)
             {
                 sampleCol.DataSource = GetSampleTypeTable();
-                sampleCol.DisplayMember = "DisplayText";
+                sampleCol.DisplayMember = "Description";
                 sampleCol.ValueMember = "SampleTypeID";
                 sampleCol.DisplayStyle = DataGridViewComboBoxDisplayStyle.DropDownButton;
             }
@@ -70,21 +70,21 @@ namespace DiagnosticLab
             technicianIDComboBox.DataSource = techDt;
             technicianIDComboBox.DisplayMember = "FullName";
             technicianIDComboBox.ValueMember = "TechnicianID";
-            technicianIDComboBox.SelectedIndex = -1; // No selection by default
+            technicianIDComboBox.SelectedIndex = -1;
 
             // TestType
             var testDt = GetTestTypeTable();
             testTypeIDComboBox.DataSource = testDt;
             testTypeIDComboBox.DisplayMember = "Name";
             testTypeIDComboBox.ValueMember = "TestTypeID";
-            testTypeIDComboBox.SelectedIndex = -1; // No selection by default
+            testTypeIDComboBox.SelectedIndex = -1;
 
             // SampleType
             var sampleDt = GetSampleTypeTable();
             sampleTypeIDComboBox.DataSource = sampleDt;
-            sampleTypeIDComboBox.DisplayMember = "DisplayText";
+            sampleTypeIDComboBox.DisplayMember = "Description";
             sampleTypeIDComboBox.ValueMember = "SampleTypeID";
-            sampleTypeIDComboBox.SelectedIndex = -1; // No selection by default
+            sampleTypeIDComboBox.SelectedIndex = -1;
         }
 
         private DataTable GetTechnicianTable()
@@ -114,8 +114,7 @@ namespace DiagnosticLab
         {
             var dt = new DataTable();
             using (var da = new SqlDataAdapter(
-                       "SELECT SampleTypeID, Description + ' (' + ISNULL(ContainerType, '') + ')' AS DisplayText FROM SampleType",
-                       connectionString))
+                       "SELECT SampleTypeID, Description FROM SampleType", connectionString))
             {
                 da.Fill(dt);
             }
@@ -158,7 +157,7 @@ namespace DiagnosticLab
 
                 if (id == null || id == DBNull.Value)
                 {
-                    labTestRecordDataGridView.Rows.RemoveAt(e.RowIndex); // редът не е записан в БД
+                    labTestRecordDataGridView.Rows.RemoveAt(e.RowIndex);
                     return;
                 }
 
@@ -179,7 +178,7 @@ namespace DiagnosticLab
                         con.Close();
                     }
 
-                    LoadLabTestRecords(); // презареждане след изтриване
+                    LoadLabTestRecords();
                 }
             }
         }
@@ -194,7 +193,6 @@ namespace DiagnosticLab
                 {
                     if (row.IsNewRow) continue;
 
-                    // Проверки и стойности
                     if (!int.TryParse(Convert.ToString(row.Cells[3].Value), out int testTypeId)) continue;
                     if (!int.TryParse(Convert.ToString(row.Cells[4].Value), out int techId)) continue;
                     if (!int.TryParse(Convert.ToString(row.Cells[5].Value), out int sampleId)) continue;
@@ -209,12 +207,10 @@ namespace DiagnosticLab
 
                     if (idVal == null || idVal == DBNull.Value)
                     {
-                        // INSERT
                         cmd = new SqlCommand("sp_InsertLabTest", con);
                     }
                     else
                     {
-                        // UPDATE
                         cmd = new SqlCommand("sp_UpdateLabTest", con);
                         cmd.Parameters.AddWithValue("@LabTestID", Convert.ToInt32(idVal));
                     }
@@ -234,8 +230,23 @@ namespace DiagnosticLab
                 con.Close();
             }
 
-            LoadLabTestRecords(); // презареждане на таблицата
+            LoadLabTestRecords();
             MessageBox.Show("Записите са обновени успешно.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            patientNameTextBox.Clear();
+            finalPriceTextBox.Clear();
+            resultSummaryTextBox.Clear();
+
+            testTypeIDComboBox.SelectedIndex = -1;
+            technicianIDComboBox.SelectedIndex = -1;
+            sampleTypeIDComboBox.SelectedIndex = -1;
+
+            testDateDateTimePicker.Value = DateTime.Now;
+
+            patientNameTextBox.Focus(); // Курсорът отива в първото поле
         }
     }
 }
