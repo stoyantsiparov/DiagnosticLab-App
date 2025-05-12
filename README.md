@@ -1,63 +1,59 @@
 
-# DiagnosticLab – Windows Forms App (.NET Framework 4.8)
+# DiagnosticLab – Windows Forms App
 
-**DiagnosticLab** е десктоп приложение, създадено с Windows Forms и SQL Server, предназначено за управление на лабораторни тестове, проби и лабораторни техници.
+**DiagnosticLab** is a desktop application built with Windows Forms and SQL Server. It is designed for managing lab tests, technicians, and sample types in a diagnostic laboratory environment.
 
-## 🧪 Основни функционалности
+## 🧪 Key Features
 
-- CRUD операции за:
-  - Видове тестове (TestType)
-  - Лаборанти (Technician)
-  - Проби (SampleType)
-  - Записи за лабораторни тестове (LabTestRecord)
-- Търсене:
-  - По една стойност в няколко свързани таблици (frmByOneParam)
-  - По множество параметри и дати (frmByMoreParam)
-- Експорт на резултати в Excel
-- Изчистване на филтри и автоматично зареждане на данни
-- MenuStrip навигация към всички форми
+- CRUD operations for:
+  - Test Types (`TestType`)
+  - Technicians (`Technician`)
+  - Sample Types (`SampleType`)
+  - Lab Test Records (`LabTestRecord`)
+- Search:
+  - By a single keyword across multiple columns (`frmByOneParam`)
+  - By multiple filters and date ranges (`frmByMoreParam`)
+- Export results to Excel
+- Clear filters and auto-load data on startup
+- Full navigation via MenuStrip
 
-## 🗃️ База данни
+## 🗃️ Database Structure
 
-Проектът използва база `DiagnosticLab`, която съдържа следните таблици:
+The application connects to a SQL Server database `DiagnosticLab` with the following main tables:
 
 - `TestType(TestTypeID, Name, BasePrice)`
 - `Technician(TechnicianID, FirstName, LastName, Certification)`
 - `SampleType(SampleTypeID, Description, ContainerType, ...)`
-- `LabTestRecord` – основна таблица със:
-  - FK към всички останали
-  - `PatientName`, `TestDate`, `FinalPrice`, `ResultSummary`
+- `LabTestRecord` – main table that references the others:
+  - Foreign keys to `TestType`, `Technician`, `SampleType`
+  - Includes `PatientName`, `TestDate`, `FinalPrice`, `ResultSummary`
 
 ## 🧾 Stored Procedures
 
-Използвани са SQL процедури за всяка таблица:
+SQL stored procedures are used throughout the application:
 
 - `sp_TestType_Insert`, `sp_TestType_Update`, `sp_TestType_Delete`, `sp_TestType_Select`
 - `sp_LabTest_Insert`, `sp_LabTest_Update`, `sp_LabTest_Delete`, `sp_GetAllLabTests`
-- Аналогично за `Technician` и `SampleType`
+- Similar procedures for `Technician` and `SampleType`
 
-## ▶️ Стартиране
+## ▶️ How to Run
 
-1. Отвори решението `DiagnosticLab.sln` в Visual Studio
-2. Увери се, че имаш SQL Server и създадена база `DiagnosticLab`
-3. Конфигурирай `connectionString` в `.cs` файловете, ако е нужно
-4. Стартирай проекта (F5)
+1. Open the `DiagnosticLab.sln` solution in Visual Studio
+2. Ensure you have a local SQL Server instance and the `DiagnosticLab` database created
+3. Update the connection string in the code files if needed
+4. Build and run the project (F5)
 
-## 🖼️ Форми и интерфейс
+## 🖼️ Forms Overview
 
-- `MainForm.cs` – централна навигация
-- `frmTestType`, `frmTechnician`, `frmSampleType` – форми за CRUD
-- `frmLabTestRecord` – главна форма с комбинирани данни
-- `frmByOneParam` – търсене по ключова дума
-- `frmByMoreParam` – търсене по няколко филтъра + експорт
+- `MainForm.cs` – main menu navigation
+- `frmTestType`, `frmTechnician`, `frmSampleType` – forms for managing reference data
+- `frmLabTestRecord` – main interface for lab test records with related data
+- `frmByOneParam` – search by single keyword across all relevant fields
+- `frmByMoreParam` – search using multiple filters and export to Excel
 
-## ⚙️ Изисквания
+## ⚙️ Requirements
 
-- Visual Studio с .NET Framework 4.8
-- SQL Server (Express или Standard)
-- Microsoft Excel (за експорта)
-- Microsoft.Office.Interop.Excel (добавена през References)
-
----
-
-✅ Проектът е напълно завършен и отговаря на всички критерии от заданията.
+- Visual Studio with .NET Framework 4.8
+- SQL Server (Express or higher)
+- Microsoft Excel (for export functionality)
+- Reference to `Microsoft.Office.Interop.Excel`
