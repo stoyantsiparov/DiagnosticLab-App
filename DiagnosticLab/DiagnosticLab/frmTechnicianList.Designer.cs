@@ -39,6 +39,7 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticLabDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.technicianDataGridView)).BeginInit();
@@ -84,6 +85,7 @@
             this.technicianDataGridView.RowTemplate.Height = 24;
             this.technicianDataGridView.Size = new System.Drawing.Size(554, 220);
             this.technicianDataGridView.TabIndex = 1;
+            this.technicianDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.technicianDataGridView_CellClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -126,11 +128,22 @@
             this.Delete.Name = "Delete";
             this.Delete.Width = 125;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(549, 339);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(113, 38);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Save";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmTechnicianList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.technicianDataGridView);
             this.Name = "frmTechnicianList";
             this.Text = "frmTechnicianList";
@@ -154,5 +167,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.Button button1;
     }
 }
