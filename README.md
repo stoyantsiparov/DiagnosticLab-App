@@ -36,12 +36,19 @@ SQL stored procedures are used throughout the application:
 - `sp_LabTest_Insert`, `sp_LabTest_Update`, `sp_LabTest_Delete`, `sp_GetAllLabTests`
 - Similar procedures for `Technician` and `SampleType`
 
-## ▶️ How to Run
+## ▶️ Installation and Setup
 
-1. Open the `DiagnosticLab.sln` solution in Visual Studio
-2. Ensure you have a local SQL Server instance and the `DiagnosticLab` database created
-3. Update the connection string in the code files if needed
-4. Build and run the project (F5)
+1. Clone the repository:
+   ```
+   git clone https://github.com/YOUR_USERNAME/DiagnosticLab.git
+   ```
+2. Open the solution file `DiagnosticLab.sln` in Visual Studio.
+3. Set up the database connection in `connectionString` located in the `.cs` files (e.g., `frmLabTestRecord.cs`, etc.).
+4. Create the SQL Server database manually or run the included scripts for table and procedure creation.
+5. Build and run the application:
+   ```
+   Ctrl + F5 (or F5 for debugging)
+   ```
 
 ## 🖼️ Forms Overview
 
