@@ -29,10 +29,7 @@ namespace DiagnosticLab
         private void frmTestType_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'diagnosticLabDataSet.LabTestRecord' table. You can move, or remove it, as needed.
-            this.labTestRecordTableAdapter.Fill(this.diagnosticLabDataSet.LabTestRecord);
-            // TODO: This line of code loads data into the 'diagnosticLabDataSet.LabTestRecord' table. You can move, or remove it, as needed.
-            this.labTestRecordTableAdapter.Fill(this.diagnosticLabDataSet.LabTestRecord);
-            //this.testTypeTableAdapter.Fill(this.diagnosticLabDataSet.TestType);
+            this.testTypeTableAdapter.Fill(this.diagnosticLabDataSet.TestType);
         }
 
         private string connectionString = "Data Source=OMEN\\SQLEXPRESS;Initial Catalog=DiagnosticLab;Integrated Security=True;TrustServerCertificate=True";
