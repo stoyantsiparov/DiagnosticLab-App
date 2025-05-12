@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DiagnosticLab
@@ -62,6 +55,20 @@ namespace DiagnosticLab
         private void recordsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new frmLabTestRecord();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void byOneParameterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmByOneParam();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void byMoreParametersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmByMoreParam();
             frm.MdiParent = this;
             frm.Show();
         }

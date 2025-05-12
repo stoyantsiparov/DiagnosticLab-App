@@ -53,10 +53,6 @@
             this.finalPriceTextBox = new System.Windows.Forms.TextBox();
             this.resultSummaryTextBox = new System.Windows.Forms.TextBox();
             this.labTestRecordDataGridView = new System.Windows.Forms.DataGridView();
-            this.sampleTypeTableAdapter = new DiagnosticLab.DiagnosticLabDataSetTableAdapters.SampleTypeTableAdapter();
-            this.testTypeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.testTypeBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +62,10 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.sampleTypeTableAdapter = new DiagnosticLab.DiagnosticLabDataSetTableAdapters.SampleTypeTableAdapter();
+            this.testTypeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.testTypeBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             patientNameLabel = new System.Windows.Forms.Label();
@@ -286,30 +286,6 @@
             this.labTestRecordDataGridView.TabIndex = 15;
             this.labTestRecordDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.labTestRecordDataGridView_CellClick);
             // 
-            // sampleTypeTableAdapter
-            // 
-            this.sampleTypeTableAdapter.ClearBeforeFill = true;
-            // 
-            // testTypeBindingSource1
-            // 
-            this.testTypeBindingSource1.DataMember = "TestType";
-            this.testTypeBindingSource1.DataSource = this.diagnosticLabDataSet;
-            // 
-            // testTypeBindingSource2
-            // 
-            this.testTypeBindingSource2.DataMember = "TestType";
-            this.testTypeBindingSource2.DataSource = this.diagnosticLabDataSet;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(297, 313);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 30);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "LabTestID";
@@ -395,6 +371,30 @@
             this.Delete.MinimumWidth = 6;
             this.Delete.Name = "Delete";
             this.Delete.Width = 125;
+            // 
+            // sampleTypeTableAdapter
+            // 
+            this.sampleTypeTableAdapter.ClearBeforeFill = true;
+            // 
+            // testTypeBindingSource1
+            // 
+            this.testTypeBindingSource1.DataMember = "TestType";
+            this.testTypeBindingSource1.DataSource = this.diagnosticLabDataSet;
+            // 
+            // testTypeBindingSource2
+            // 
+            this.testTypeBindingSource2.DataMember = "TestType";
+            this.testTypeBindingSource2.DataSource = this.diagnosticLabDataSet;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(297, 313);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(113, 30);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Save";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
