@@ -96,21 +96,21 @@
             // testTypeToolStripMenuItem
             // 
             this.testTypeToolStripMenuItem.Name = "testTypeToolStripMenuItem";
-            this.testTypeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.testTypeToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.testTypeToolStripMenuItem.Text = "TestType";
             this.testTypeToolStripMenuItem.Click += new System.EventHandler(this.testTypeToolStripMenuItem_Click_1);
             // 
             // technicianToolStripMenuItem1
             // 
             this.technicianToolStripMenuItem1.Name = "technicianToolStripMenuItem1";
-            this.technicianToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.technicianToolStripMenuItem1.Size = new System.Drawing.Size(173, 26);
             this.technicianToolStripMenuItem1.Text = "Technician";
             this.technicianToolStripMenuItem1.Click += new System.EventHandler(this.technicianToolStripMenuItem1_Click);
             // 
             // sampleTypeToolStripMenuItem1
             // 
             this.sampleTypeToolStripMenuItem1.Name = "sampleTypeToolStripMenuItem1";
-            this.sampleTypeToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.sampleTypeToolStripMenuItem1.Size = new System.Drawing.Size(173, 26);
             this.sampleTypeToolStripMenuItem1.Text = "SampleType";
             this.sampleTypeToolStripMenuItem1.Click += new System.EventHandler(this.sampleTypeToolStripMenuItem1_Click);
             // 

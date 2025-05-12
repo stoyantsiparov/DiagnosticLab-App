@@ -51,6 +51,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DiagnosticLabDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmSampleDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSampleDetails.Designer.cs">
+      <DependentUpon>frmSampleDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSampleType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmSampleDetails.resx">
+      <DependentUpon>frmSampleDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSampleType.resx">
       <DependentUpon>frmSampleType.cs</DependentUpon>
     </EmbeddedResource>
