@@ -280,6 +280,10 @@ namespace DiagnosticLab
                     case TextBox tb:
                         tb.Font = new Font("Segoe UI", 9);
                         break;
+
+                    case DateTimePicker dtp:
+                        dtp.Font = new Font("Segoe UI", 9);
+                        break;
                 }
             }
 
