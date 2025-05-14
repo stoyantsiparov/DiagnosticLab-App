@@ -77,11 +77,11 @@
             this.dataGridViewTextBoxColumn3,
             this.Delete});
             this.testTypeDataGridView.DataSource = this.testTypeBindingSource;
-            this.testTypeDataGridView.Location = new System.Drawing.Point(103, 105);
+            this.testTypeDataGridView.Location = new System.Drawing.Point(105, 105);
             this.testTypeDataGridView.Name = "testTypeDataGridView";
             this.testTypeDataGridView.RowHeadersWidth = 51;
             this.testTypeDataGridView.RowTemplate.Height = 24;
-            this.testTypeDataGridView.Size = new System.Drawing.Size(428, 220);
+            this.testTypeDataGridView.Size = new System.Drawing.Size(571, 220);
             this.testTypeDataGridView.TabIndex = 1;
             this.testTypeDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.testTypeDataGridView_CellClick);
             // 
@@ -120,7 +120,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(418, 331);
+            this.button1.Location = new System.Drawing.Point(563, 331);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 38);
             this.button1.TabIndex = 2;
@@ -132,7 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 450);
+            this.ClientSize = new System.Drawing.Size(768, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.testTypeDataGridView);
             this.Name = "frmTestTypeList";
