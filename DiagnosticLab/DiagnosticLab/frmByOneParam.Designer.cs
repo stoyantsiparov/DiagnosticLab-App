@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label enterValue;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmByOneParam));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -255,8 +256,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(enterValue);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmByOneParam";
-            this.Text = "frmByOneParam";
+            this.Text = "Search by One";
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticLabDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.labTestRecordBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.labTestRecordDataGridView)).EndInit();

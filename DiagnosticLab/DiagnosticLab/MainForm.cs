@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace DiagnosticLab
@@ -8,6 +9,7 @@ namespace DiagnosticLab
         public MainForm()
         {
             InitializeComponent();
+            ApplyStyle();
         }
 
         private void testTypeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -71,6 +73,29 @@ namespace DiagnosticLab
             var frm = new frmByMoreParam();
             frm.MdiParent = this;
             frm.Show();
+        }
+
+        private void ApplyStyle()
+        {
+            this.BackColor = ColorTranslator.FromHtml("#FFFBDE");
+            this.IsMdiContainer = true; // За поддръжка на MDI стил
+
+            foreach (Control ctrl in this.Controls)
+            {
+                switch (ctrl)
+                {
+                    case Label lbl:
+                        lbl.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                        lbl.ForeColor = ColorTranslator.FromHtml("#096B68");
+                        break;
+
+                    case MenuStrip menu:
+                        menu.BackColor = ColorTranslator.FromHtml("#90D1CA");
+                        menu.ForeColor = Color.Black;
+                        menu.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+                        break;
+                }
+            }
         }
     }
 }

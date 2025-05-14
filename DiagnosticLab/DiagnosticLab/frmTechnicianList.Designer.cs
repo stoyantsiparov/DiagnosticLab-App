@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTechnicianList));
             this.diagnosticLabDataSet = new DiagnosticLab.DiagnosticLabDataSet();
             this.technicianBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.technicianTableAdapter = new DiagnosticLab.DiagnosticLabDataSetTableAdapters.TechnicianTableAdapter();
@@ -145,8 +146,9 @@
             this.ClientSize = new System.Drawing.Size(856, 453);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.technicianDataGridView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmTechnicianList";
-            this.Text = "frmTechnicianList";
+            this.Text = "Technicians List";
             this.Load += new System.EventHandler(this.frmTechnicianList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticLabDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).EndInit();

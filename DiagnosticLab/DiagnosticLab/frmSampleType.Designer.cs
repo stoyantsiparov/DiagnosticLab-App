@@ -33,6 +33,7 @@
             System.Windows.Forms.Label storageTemperatureLabel;
             System.Windows.Forms.Label maxHoldingTimeHrsLabel;
             System.Windows.Forms.Label containerTypeLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSampleType));
             this.diagnosticLabDataSet = new DiagnosticLab.DiagnosticLabDataSet();
             this.sampleTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sampleTypeTableAdapter = new DiagnosticLab.DiagnosticLabDataSetTableAdapters.SampleTypeTableAdapter();
@@ -166,8 +167,9 @@
             this.Controls.Add(this.maxHoldingTimeHrsTextBox);
             this.Controls.Add(containerTypeLabel);
             this.Controls.Add(this.containerTypeTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSampleType";
-            this.Text = "frmSampleType";
+            this.Text = "Add Sample";
             this.Load += new System.EventHandler(this.frmSampleType_Load);
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticLabDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sampleTypeBindingSource)).EndInit();

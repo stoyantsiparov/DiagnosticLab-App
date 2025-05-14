@@ -36,6 +36,7 @@
             System.Windows.Forms.Label sampleTypeIDLabel;
             System.Windows.Forms.Label finalPriceLabel;
             System.Windows.Forms.Label resultSummaryLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLabTestRecord));
             this.diagnosticLabDataSet = new DiagnosticLab.DiagnosticLabDataSet();
             this.labTestRecordBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labTestRecordTableAdapter = new DiagnosticLab.DiagnosticLabDataSetTableAdapters.LabTestRecordTableAdapter();
@@ -439,8 +440,9 @@
             this.Controls.Add(this.finalPriceTextBox);
             this.Controls.Add(resultSummaryLabel);
             this.Controls.Add(this.resultSummaryTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLabTestRecord";
-            this.Text = "frmLabTestRecord";
+            this.Text = "Lab Records";
             this.Load += new System.EventHandler(this.frmLabTestRecord_Load);
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticLabDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.labTestRecordBindingSource)).EndInit();

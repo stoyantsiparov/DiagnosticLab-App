@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTestTypeList));
             this.diagnosticLabDataSet = new DiagnosticLab.DiagnosticLabDataSet();
             this.testTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.testTypeTableAdapter = new DiagnosticLab.DiagnosticLabDataSetTableAdapters.TestTypeTableAdapter();
             this.tableAdapterManager = new DiagnosticLab.DiagnosticLabDataSetTableAdapters.TableAdapterManager();
             this.testTypeDataGridView = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticLabDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testTypeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testTypeDataGridView)).BeginInit();
@@ -85,16 +86,6 @@
             this.testTypeDataGridView.TabIndex = 1;
             this.testTypeDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.testTypeDataGridView_CellClick);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(563, 331);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 38);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "TestTypeID";
@@ -128,6 +119,16 @@
             this.Delete.Name = "Delete";
             this.Delete.Width = 125;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(563, 331);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(113, 38);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Save";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmTestTypeList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -135,8 +136,9 @@
             this.ClientSize = new System.Drawing.Size(768, 453);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.testTypeDataGridView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmTestTypeList";
-            this.Text = "frmTestTypeList";
+            this.Text = "Test Types List";
             this.Load += new System.EventHandler(this.frmTestTypeList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticLabDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testTypeBindingSource)).EndInit();

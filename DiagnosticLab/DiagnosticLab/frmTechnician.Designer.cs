@@ -32,6 +32,7 @@
             System.Windows.Forms.Label firstNameLabel;
             System.Windows.Forms.Label lastNameLabel;
             System.Windows.Forms.Label certificationLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTechnician));
             this.diagnosticLabDataSet = new DiagnosticLab.DiagnosticLabDataSet();
             this.technicianBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.technicianTableAdapter = new DiagnosticLab.DiagnosticLabDataSetTableAdapters.TechnicianTableAdapter();
@@ -143,8 +144,9 @@
             this.Controls.Add(this.lastNameTextBox);
             this.Controls.Add(certificationLabel);
             this.Controls.Add(this.certificationTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmTechnician";
-            this.Text = "frmTechnician";
+            this.Text = "Add Technician";
             this.Load += new System.EventHandler(this.frmTechnician_Load);
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticLabDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.technicianBindingSource)).EndInit();

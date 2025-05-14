@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmByMoreParam));
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.diagnosticLabDataSet = new DiagnosticLab.DiagnosticLabDataSet();
@@ -357,8 +358,9 @@
             this.Controls.Add(this.labTestRecordDataGridView);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmByMoreParam";
-            this.Text = "frmByMoreParam";
+            this.Text = "Search by More";
             this.Load += new System.EventHandler(this.frmByMoreParam_Load);
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticLabDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.labTestRecordBindingSource)).EndInit();

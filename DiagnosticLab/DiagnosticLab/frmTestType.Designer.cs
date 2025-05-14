@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label nameLabel;
             System.Windows.Forms.Label basePriceLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTestType));
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.testTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.diagnosticLabDataSet = new DiagnosticLab.DiagnosticLabDataSet();
@@ -122,8 +123,9 @@
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(basePriceLabel);
             this.Controls.Add(this.basePriceTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmTestType";
-            this.Text = "frmTestType";
+            this.Text = "Add Test Type";
             this.Load += new System.EventHandler(this.frmTestType_Load);
             ((System.ComponentModel.ISupportInitialize)(this.testTypeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticLabDataSet)).EndInit();

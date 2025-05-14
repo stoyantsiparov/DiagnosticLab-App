@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSampleTypeList));
             this.diagnosticLabDataSet = new DiagnosticLab.DiagnosticLabDataSet();
             this.sampleTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sampleTypeTableAdapter = new DiagnosticLab.DiagnosticLabDataSetTableAdapters.SampleTypeTableAdapter();
@@ -155,8 +156,9 @@
             this.ClientSize = new System.Drawing.Size(1032, 453);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.sampleTypeDataGridView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSampleTypeList";
-            this.Text = "frmSampleTypeList";
+            this.Text = "Samples List";
             this.Load += new System.EventHandler(this.frmSampleTypeList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticLabDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sampleTypeBindingSource)).EndInit();
