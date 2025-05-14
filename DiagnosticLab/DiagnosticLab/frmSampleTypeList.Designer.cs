@@ -85,7 +85,7 @@
             this.sampleTypeDataGridView.Name = "sampleTypeDataGridView";
             this.sampleTypeDataGridView.RowHeadersWidth = 51;
             this.sampleTypeDataGridView.RowTemplate.Height = 24;
-            this.sampleTypeDataGridView.Size = new System.Drawing.Size(680, 220);
+            this.sampleTypeDataGridView.Size = new System.Drawing.Size(904, 220);
             this.sampleTypeDataGridView.TabIndex = 1;
             this.sampleTypeDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sampleTypeDataGridView_CellClick);
             // 
@@ -140,7 +140,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(620, 323);
+            this.button1.Location = new System.Drawing.Point(844, 323);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 38);
             this.button1.TabIndex = 3;
@@ -152,7 +152,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 453);
+            this.ClientSize = new System.Drawing.Size(1032, 453);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.sampleTypeDataGridView);
             this.Name = "frmSampleTypeList";
