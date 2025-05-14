@@ -139,7 +139,7 @@
             // byOneParameterToolStripMenuItem
             // 
             this.byOneParameterToolStripMenuItem.Name = "byOneParameterToolStripMenuItem";
-            this.byOneParameterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.byOneParameterToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
             this.byOneParameterToolStripMenuItem.Text = "By one parameter";
             this.byOneParameterToolStripMenuItem.Click += new System.EventHandler(this.byOneParameterToolStripMenuItem_Click);
             // 
@@ -154,7 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 453);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;

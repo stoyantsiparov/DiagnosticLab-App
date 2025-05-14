@@ -38,7 +38,6 @@
             this.labTestRecordTableAdapter = new DiagnosticLab.DiagnosticLabDataSetTableAdapters.LabTestRecordTableAdapter();
             this.tableAdapterManager = new DiagnosticLab.DiagnosticLabDataSetTableAdapters.TableAdapterManager();
             this.labTestRecordDataGridView = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +49,7 @@
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button3 = new System.Windows.Forms.Button();
             enterValue = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticLabDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.labTestRecordBindingSource)).BeginInit();
@@ -138,16 +138,6 @@
             this.labTestRecordDataGridView.RowTemplate.Height = 24;
             this.labTestRecordDataGridView.Size = new System.Drawing.Size(928, 220);
             this.labTestRecordDataGridView.TabIndex = 6;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(456, 39);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(101, 39);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Clear";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -244,11 +234,21 @@
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
             this.dataGridViewTextBoxColumn11.Width = 125;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(456, 39);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(101, 39);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Clear";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // frmByOneParam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1003, 450);
+            this.ClientSize = new System.Drawing.Size(1003, 453);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.labTestRecordDataGridView);
             this.Controls.Add(this.button2);
