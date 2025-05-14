@@ -79,11 +79,11 @@
             this.dataGridViewTextBoxColumn4,
             this.Delete});
             this.technicianDataGridView.DataSource = this.technicianBindingSource;
-            this.technicianDataGridView.Location = new System.Drawing.Point(108, 113);
+            this.technicianDataGridView.Location = new System.Drawing.Point(46, 113);
             this.technicianDataGridView.Name = "technicianDataGridView";
             this.technicianDataGridView.RowHeadersWidth = 51;
             this.technicianDataGridView.RowTemplate.Height = 24;
-            this.technicianDataGridView.Size = new System.Drawing.Size(554, 220);
+            this.technicianDataGridView.Size = new System.Drawing.Size(737, 220);
             this.technicianDataGridView.TabIndex = 1;
             this.technicianDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.technicianDataGridView_CellClick);
             // 
@@ -130,7 +130,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(549, 339);
+            this.button1.Location = new System.Drawing.Point(670, 339);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 38);
             this.button1.TabIndex = 3;
@@ -142,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(856, 453);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.technicianDataGridView);
             this.Name = "frmTechnicianList";

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace DiagnosticLab
@@ -10,6 +11,7 @@ namespace DiagnosticLab
         public frmTechnicianList()
         {
             InitializeComponent();
+            ApplyStyle();
         }
 
         private string connectionString = "Data Source=OMEN\\SQLEXPRESS;Initial Catalog=DiagnosticLab;Integrated Security=True;TrustServerCertificate=True";
@@ -94,6 +96,37 @@ namespace DiagnosticLab
             }
 
             technicianDataGridView.DataSource = dt;
+        }
+
+        private void ApplyStyle()
+        {
+            this.BackColor = ColorTranslator.FromHtml("#FFFBDE");
+
+            foreach (Control ctrl in this.Controls)
+            {
+                switch (ctrl)
+                {
+                    case Label lbl:
+                        lbl.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                        lbl.ForeColor = ColorTranslator.FromHtml("#096B68");
+                        break;
+
+                    case Button btn:
+                        btn.FlatStyle = FlatStyle.Flat;
+                        btn.BackColor = ColorTranslator.FromHtml("#90D1CA");
+                        btn.ForeColor = Color.White;
+                        btn.Font = new Font("Segoe UI", 10);
+                        btn.Cursor = Cursors.Hand;
+                        break;
+                }
+            }
+
+            technicianDataGridView.EnableHeadersVisualStyles = false;
+            technicianDataGridView.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#129990");
+            technicianDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            technicianDataGridView.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            technicianDataGridView.DefaultCellStyle.BackColor = Color.White;
+            technicianDataGridView.DefaultCellStyle.Font = new Font("Segoe UI", 10);
         }
     }
 }
