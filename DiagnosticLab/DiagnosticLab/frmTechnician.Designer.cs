@@ -50,7 +50,7 @@
             // firstNameLabel
             // 
             firstNameLabel.AutoSize = true;
-            firstNameLabel.Location = new System.Drawing.Point(59, 149);
+            firstNameLabel.Location = new System.Drawing.Point(80, 147);
             firstNameLabel.Name = "firstNameLabel";
             firstNameLabel.Size = new System.Drawing.Size(75, 16);
             firstNameLabel.TabIndex = 1;
@@ -59,7 +59,7 @@
             // lastNameLabel
             // 
             lastNameLabel.AutoSize = true;
-            lastNameLabel.Location = new System.Drawing.Point(59, 177);
+            lastNameLabel.Location = new System.Drawing.Point(80, 175);
             lastNameLabel.Name = "lastNameLabel";
             lastNameLabel.Size = new System.Drawing.Size(75, 16);
             lastNameLabel.TabIndex = 3;
@@ -68,7 +68,7 @@
             // certificationLabel
             // 
             certificationLabel.AutoSize = true;
-            certificationLabel.Location = new System.Drawing.Point(59, 205);
+            certificationLabel.Location = new System.Drawing.Point(80, 203);
             certificationLabel.Name = "certificationLabel";
             certificationLabel.Size = new System.Drawing.Size(79, 16);
             certificationLabel.TabIndex = 5;
@@ -100,7 +100,7 @@
             // firstNameTextBox
             // 
             this.firstNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.technicianBindingSource, "FirstName", true));
-            this.firstNameTextBox.Location = new System.Drawing.Point(144, 146);
+            this.firstNameTextBox.Location = new System.Drawing.Point(208, 144);
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(162, 22);
             this.firstNameTextBox.TabIndex = 2;
@@ -108,7 +108,7 @@
             // lastNameTextBox
             // 
             this.lastNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.technicianBindingSource, "LastName", true));
-            this.lastNameTextBox.Location = new System.Drawing.Point(144, 174);
+            this.lastNameTextBox.Location = new System.Drawing.Point(208, 172);
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(162, 22);
             this.lastNameTextBox.TabIndex = 4;
@@ -116,16 +116,16 @@
             // certificationTextBox
             // 
             this.certificationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.technicianBindingSource, "Certification", true));
-            this.certificationTextBox.Location = new System.Drawing.Point(144, 202);
+            this.certificationTextBox.Location = new System.Drawing.Point(208, 200);
             this.certificationTextBox.Name = "certificationTextBox";
             this.certificationTextBox.Size = new System.Drawing.Size(162, 22);
             this.certificationTextBox.TabIndex = 6;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(204, 247);
+            this.button1.Location = new System.Drawing.Point(257, 245);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 37);
+            this.button1.Size = new System.Drawing.Size(113, 37);
             this.button1.TabIndex = 7;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
@@ -135,7 +135,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(482, 453);
             this.Controls.Add(this.button1);
             this.Controls.Add(firstNameLabel);
             this.Controls.Add(this.firstNameTextBox);

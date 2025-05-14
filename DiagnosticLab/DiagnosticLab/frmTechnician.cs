@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace DiagnosticLab
@@ -10,6 +11,7 @@ namespace DiagnosticLab
         public frmTechnician()
         {
             InitializeComponent();
+            ApplyStyle();
         }
 
         private void frmTechnician_Load(object sender, EventArgs e)
@@ -51,6 +53,34 @@ namespace DiagnosticLab
             lastNameTextBox.Clear();
             certificationTextBox.Clear();
             firstNameTextBox.Focus();
+        }
+
+        private void ApplyStyle()
+        {
+            this.BackColor = ColorTranslator.FromHtml("#FFFBDE");
+
+            foreach (Control ctrl in this.Controls)
+            {
+                switch (ctrl)
+                {
+                    case Label lbl:
+                        lbl.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                        lbl.ForeColor = ColorTranslator.FromHtml("#096B68");
+                        break;
+
+                    case Button btn:
+                        btn.FlatStyle = FlatStyle.Flat;
+                        btn.BackColor = ColorTranslator.FromHtml("#90D1CA");
+                        btn.ForeColor = Color.White;
+                        btn.Font = new Font("Segoe UI", 10);
+                        btn.Cursor = Cursors.Hand;
+                        break;
+
+                    case TextBox tb:
+                        tb.Font = new Font("Segoe UI", 9);
+                        break;
+                }
+            }
         }
     }
 }
