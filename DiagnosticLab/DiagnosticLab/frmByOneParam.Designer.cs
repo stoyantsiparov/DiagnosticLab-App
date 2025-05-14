@@ -38,7 +38,6 @@
             this.labTestRecordTableAdapter = new DiagnosticLab.DiagnosticLabDataSetTableAdapters.LabTestRecordTableAdapter();
             this.tableAdapterManager = new DiagnosticLab.DiagnosticLabDataSetTableAdapters.TableAdapterManager();
             this.labTestRecordDataGridView = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +49,7 @@
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button3 = new System.Windows.Forms.Button();
             enterValue = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticLabDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.labTestRecordBindingSource)).BeginInit();
@@ -67,16 +67,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(139, 43);
+            this.textBox1.Location = new System.Drawing.Point(170, 43);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(159, 22);
             this.textBox1.TabIndex = 3;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(318, 39);
+            this.button1.Location = new System.Drawing.Point(349, 39);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 31);
+            this.button1.Size = new System.Drawing.Size(101, 39);
             this.button1.TabIndex = 4;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
@@ -86,7 +86,7 @@
             // 
             this.button2.Location = new System.Drawing.Point(863, 39);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 31);
+            this.button2.Size = new System.Drawing.Size(101, 39);
             this.button2.TabIndex = 5;
             this.button2.Text = "Excel";
             this.button2.UseVisualStyleBackColor = true;
@@ -138,16 +138,6 @@
             this.labTestRecordDataGridView.RowTemplate.Height = 24;
             this.labTestRecordDataGridView.Size = new System.Drawing.Size(928, 220);
             this.labTestRecordDataGridView.TabIndex = 6;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(425, 39);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(101, 31);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Clear";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -243,6 +233,16 @@
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
             this.dataGridViewTextBoxColumn11.Width = 125;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(456, 39);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(101, 39);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Clear";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // frmByOneParam
             // 
