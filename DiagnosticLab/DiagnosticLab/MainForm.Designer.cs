@@ -55,7 +55,7 @@
             this.searchToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -66,7 +66,7 @@
             this.technicianToolStripMenuItem,
             this.sampleTypeToolStripMenuItem});
             this.supportToolStripMenuItem.Name = "supportToolStripMenuItem";
-            this.supportToolStripMenuItem.Size = new System.Drawing.Size(76, 26);
+            this.supportToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.supportToolStripMenuItem.Text = "Support";
             // 
             // testTToolStripMenuItem
@@ -97,7 +97,7 @@
             this.technicianToolStripMenuItem1,
             this.sampleTypeToolStripMenuItem1});
             this.listToolStripMenuItem.Name = "listToolStripMenuItem";
-            this.listToolStripMenuItem.Size = new System.Drawing.Size(51, 26);
+            this.listToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
             this.listToolStripMenuItem.Text = "Lists";
             // 
             // testTypeToolStripMenuItem
@@ -124,7 +124,7 @@
             // recordsToolStripMenuItem
             // 
             this.recordsToolStripMenuItem.Name = "recordsToolStripMenuItem";
-            this.recordsToolStripMenuItem.Size = new System.Drawing.Size(76, 26);
+            this.recordsToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.recordsToolStripMenuItem.Text = "Records";
             this.recordsToolStripMenuItem.Click += new System.EventHandler(this.recordsToolStripMenuItem_Click);
             // 
@@ -134,7 +134,7 @@
             this.byOneParameterToolStripMenuItem,
             this.byMoreParametersToolStripMenuItem});
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(67, 26);
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
             this.searchToolStripMenuItem.Text = "Search";
             // 
             // byOneParameterToolStripMenuItem

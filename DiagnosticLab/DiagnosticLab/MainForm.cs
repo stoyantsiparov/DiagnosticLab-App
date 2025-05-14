@@ -9,6 +9,7 @@ namespace DiagnosticLab
         public MainForm()
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized; // Максимизиране на прозореца
             ApplyStyle();
         }
 
@@ -85,7 +86,7 @@ namespace DiagnosticLab
                 switch (ctrl)
                 {
                     case Label lbl:
-                        lbl.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                        lbl.Font = new Font("Segoe UI", 10, FontStyle.Bold);
                         lbl.ForeColor = ColorTranslator.FromHtml("#096B68");
                         break;
 
