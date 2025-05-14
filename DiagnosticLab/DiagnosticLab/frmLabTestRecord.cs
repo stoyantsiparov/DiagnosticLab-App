@@ -253,7 +253,8 @@ namespace DiagnosticLab
 
         private void ApplyStyle()
         {
-            this.BackColor = Color.WhiteSmoke;
+            // Основен фон на формата
+            this.BackColor = ColorTranslator.FromHtml("#FFFBDE");
 
             foreach (Control ctrl in this.Controls)
             {
@@ -261,29 +262,33 @@ namespace DiagnosticLab
                 {
                     case Label lbl:
                         lbl.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                        lbl.ForeColor = ColorTranslator.FromHtml("#096B68");
                         break;
+
                     case Button btn:
                         btn.FlatStyle = FlatStyle.Flat;
-                        btn.BackColor = Color.SteelBlue;
+                        btn.BackColor = ColorTranslator.FromHtml("#90D1CA");
                         btn.ForeColor = Color.White;
                         btn.Font = new Font("Segoe UI", 10);
                         btn.Cursor = Cursors.Hand;
                         break;
+
                     case ComboBox cmb:
-                        cmb.Font = new Font("Segoe UI", 8);
+                        cmb.Font = new Font("Segoe UI", 9);
                         break;
+
                     case TextBox tb:
-                        tb.Font = new Font("Segoe UI", 8);
+                        tb.Font = new Font("Segoe UI", 9);
                         break;
                 }
             }
 
             // Стилизация на DataGridView
             labTestRecordDataGridView.EnableHeadersVisualStyles = false;
-            labTestRecordDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.Navy;
+            labTestRecordDataGridView.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#129990");
             labTestRecordDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             labTestRecordDataGridView.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            labTestRecordDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
+            labTestRecordDataGridView.DefaultCellStyle.BackColor = Color.White;
             labTestRecordDataGridView.DefaultCellStyle.Font = new Font("Segoe UI", 10);
         }
     }
