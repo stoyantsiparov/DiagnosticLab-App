@@ -49,9 +49,9 @@
             nameLabel.AutoSize = true;
             nameLabel.Location = new System.Drawing.Point(81, 163);
             nameLabel.Name = "nameLabel";
-            nameLabel.Size = new System.Drawing.Size(47, 16);
+            nameLabel.Size = new System.Drawing.Size(72, 16);
             nameLabel.TabIndex = 1;
-            nameLabel.Text = "Name:";
+            nameLabel.Text = "Test Type:";
             // 
             // basePriceLabel
             // 

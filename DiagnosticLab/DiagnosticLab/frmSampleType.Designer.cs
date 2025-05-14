@@ -53,7 +53,7 @@
             // descriptionLabel
             // 
             descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(51, 143);
+            descriptionLabel.Location = new System.Drawing.Point(41, 143);
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new System.Drawing.Size(78, 16);
             descriptionLabel.TabIndex = 1;
@@ -62,7 +62,7 @@
             // storageTemperatureLabel
             // 
             storageTemperatureLabel.AutoSize = true;
-            storageTemperatureLabel.Location = new System.Drawing.Point(51, 234);
+            storageTemperatureLabel.Location = new System.Drawing.Point(41, 234);
             storageTemperatureLabel.Name = "storageTemperatureLabel";
             storageTemperatureLabel.Size = new System.Drawing.Size(139, 16);
             storageTemperatureLabel.TabIndex = 3;
@@ -71,7 +71,7 @@
             // maxHoldingTimeHrsLabel
             // 
             maxHoldingTimeHrsLabel.AutoSize = true;
-            maxHoldingTimeHrsLabel.Location = new System.Drawing.Point(51, 262);
+            maxHoldingTimeHrsLabel.Location = new System.Drawing.Point(41, 262);
             maxHoldingTimeHrsLabel.Name = "maxHoldingTimeHrsLabel";
             maxHoldingTimeHrsLabel.Size = new System.Drawing.Size(143, 16);
             maxHoldingTimeHrsLabel.TabIndex = 5;
@@ -80,7 +80,7 @@
             // containerTypeLabel
             // 
             containerTypeLabel.AutoSize = true;
-            containerTypeLabel.Location = new System.Drawing.Point(51, 290);
+            containerTypeLabel.Location = new System.Drawing.Point(41, 290);
             containerTypeLabel.Name = "containerTypeLabel";
             containerTypeLabel.Size = new System.Drawing.Size(102, 16);
             containerTypeLabel.TabIndex = 7;
@@ -112,7 +112,7 @@
             // descriptionTextBox
             // 
             this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sampleTypeBindingSource, "Description", true));
-            this.descriptionTextBox.Location = new System.Drawing.Point(200, 140);
+            this.descriptionTextBox.Location = new System.Drawing.Point(275, 140);
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
             this.descriptionTextBox.Size = new System.Drawing.Size(161, 85);
@@ -121,7 +121,7 @@
             // storageTemperatureTextBox
             // 
             this.storageTemperatureTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sampleTypeBindingSource, "StorageTemperature", true));
-            this.storageTemperatureTextBox.Location = new System.Drawing.Point(200, 231);
+            this.storageTemperatureTextBox.Location = new System.Drawing.Point(275, 231);
             this.storageTemperatureTextBox.Name = "storageTemperatureTextBox";
             this.storageTemperatureTextBox.Size = new System.Drawing.Size(161, 22);
             this.storageTemperatureTextBox.TabIndex = 4;
@@ -129,7 +129,7 @@
             // maxHoldingTimeHrsTextBox
             // 
             this.maxHoldingTimeHrsTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sampleTypeBindingSource, "MaxHoldingTimeHrs", true));
-            this.maxHoldingTimeHrsTextBox.Location = new System.Drawing.Point(200, 259);
+            this.maxHoldingTimeHrsTextBox.Location = new System.Drawing.Point(275, 259);
             this.maxHoldingTimeHrsTextBox.Name = "maxHoldingTimeHrsTextBox";
             this.maxHoldingTimeHrsTextBox.Size = new System.Drawing.Size(161, 22);
             this.maxHoldingTimeHrsTextBox.TabIndex = 6;
@@ -137,14 +137,14 @@
             // containerTypeTextBox
             // 
             this.containerTypeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sampleTypeBindingSource, "ContainerType", true));
-            this.containerTypeTextBox.Location = new System.Drawing.Point(200, 287);
+            this.containerTypeTextBox.Location = new System.Drawing.Point(275, 287);
             this.containerTypeTextBox.Name = "containerTypeTextBox";
             this.containerTypeTextBox.Size = new System.Drawing.Size(161, 22);
             this.containerTypeTextBox.TabIndex = 8;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(259, 330);
+            this.button1.Location = new System.Drawing.Point(334, 330);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 37);
             this.button1.TabIndex = 9;
