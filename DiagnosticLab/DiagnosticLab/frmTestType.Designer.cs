@@ -47,7 +47,7 @@
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(46, 145);
+            nameLabel.Location = new System.Drawing.Point(81, 163);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new System.Drawing.Size(47, 16);
             nameLabel.TabIndex = 1;
@@ -56,7 +56,7 @@
             // basePriceLabel
             // 
             basePriceLabel.AutoSize = true;
-            basePriceLabel.Location = new System.Drawing.Point(46, 173);
+            basePriceLabel.Location = new System.Drawing.Point(81, 191);
             basePriceLabel.Name = "basePriceLabel";
             basePriceLabel.Size = new System.Drawing.Size(76, 16);
             basePriceLabel.TabIndex = 3;
@@ -65,7 +65,7 @@
             // nameTextBox
             // 
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testTypeBindingSource, "Name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(128, 142);
+            this.nameTextBox.Location = new System.Drawing.Point(201, 160);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(160, 22);
             this.nameTextBox.TabIndex = 2;
@@ -83,7 +83,7 @@
             // basePriceTextBox
             // 
             this.basePriceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.testTypeBindingSource, "BasePrice", true));
-            this.basePriceTextBox.Location = new System.Drawing.Point(128, 170);
+            this.basePriceTextBox.Location = new System.Drawing.Point(201, 188);
             this.basePriceTextBox.Name = "basePriceTextBox";
             this.basePriceTextBox.Size = new System.Drawing.Size(160, 22);
             this.basePriceTextBox.TabIndex = 4;
@@ -104,7 +104,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(175, 214);
+            this.button1.Location = new System.Drawing.Point(248, 232);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 37);
             this.button1.TabIndex = 5;
@@ -116,7 +116,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(482, 453);
             this.Controls.Add(this.button1);
             this.Controls.Add(nameLabel);
             this.Controls.Add(this.nameTextBox);
