@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace DiagnosticLab
@@ -19,6 +20,7 @@ namespace DiagnosticLab
         {
             LoadComboBoxes();
             LoadLabTestRecords();
+            ApplyStyle();
         }
 
         private void LoadLabTestRecords()
@@ -247,6 +249,42 @@ namespace DiagnosticLab
             testDateDateTimePicker.Value = DateTime.Now;
 
             patientNameTextBox.Focus(); // Курсорът отива в първото поле
+        }
+
+        private void ApplyStyle()
+        {
+            this.BackColor = Color.WhiteSmoke;
+
+            foreach (Control ctrl in this.Controls)
+            {
+                switch (ctrl)
+                {
+                    case Label lbl:
+                        lbl.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                        break;
+                    case Button btn:
+                        btn.FlatStyle = FlatStyle.Flat;
+                        btn.BackColor = Color.SteelBlue;
+                        btn.ForeColor = Color.White;
+                        btn.Font = new Font("Segoe UI", 10);
+                        btn.Cursor = Cursors.Hand;
+                        break;
+                    case ComboBox cmb:
+                        cmb.Font = new Font("Segoe UI", 8);
+                        break;
+                    case TextBox tb:
+                        tb.Font = new Font("Segoe UI", 8);
+                        break;
+                }
+            }
+
+            // Стилизация на DataGridView
+            labTestRecordDataGridView.EnableHeadersVisualStyles = false;
+            labTestRecordDataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.Navy;
+            labTestRecordDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            labTestRecordDataGridView.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            labTestRecordDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
+            labTestRecordDataGridView.DefaultCellStyle.Font = new Font("Segoe UI", 10);
         }
     }
 }

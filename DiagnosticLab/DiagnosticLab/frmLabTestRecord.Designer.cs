@@ -182,7 +182,7 @@
             // patientNameTextBox
             // 
             this.patientNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.labTestRecordBindingSource, "PatientName", true));
-            this.patientNameTextBox.Location = new System.Drawing.Point(159, 111);
+            this.patientNameTextBox.Location = new System.Drawing.Point(215, 111);
             this.patientNameTextBox.Name = "patientNameTextBox";
             this.patientNameTextBox.Size = new System.Drawing.Size(251, 22);
             this.patientNameTextBox.TabIndex = 2;
@@ -190,7 +190,7 @@
             // testDateDateTimePicker
             // 
             this.testDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.labTestRecordBindingSource, "TestDate", true));
-            this.testDateDateTimePicker.Location = new System.Drawing.Point(159, 139);
+            this.testDateDateTimePicker.Location = new System.Drawing.Point(215, 139);
             this.testDateDateTimePicker.Name = "testDateDateTimePicker";
             this.testDateDateTimePicker.Size = new System.Drawing.Size(251, 22);
             this.testDateDateTimePicker.TabIndex = 4;
@@ -201,7 +201,7 @@
             this.testTypeIDComboBox.DataSource = this.testTypeBindingSource;
             this.testTypeIDComboBox.DisplayMember = "Name";
             this.testTypeIDComboBox.FormattingEnabled = true;
-            this.testTypeIDComboBox.Location = new System.Drawing.Point(159, 167);
+            this.testTypeIDComboBox.Location = new System.Drawing.Point(215, 167);
             this.testTypeIDComboBox.Name = "testTypeIDComboBox";
             this.testTypeIDComboBox.Size = new System.Drawing.Size(251, 24);
             this.testTypeIDComboBox.TabIndex = 6;
@@ -218,7 +218,7 @@
             this.technicianIDComboBox.DataSource = this.technicianBindingSource;
             this.technicianIDComboBox.DisplayMember = "TechnicianID";
             this.technicianIDComboBox.FormattingEnabled = true;
-            this.technicianIDComboBox.Location = new System.Drawing.Point(159, 197);
+            this.technicianIDComboBox.Location = new System.Drawing.Point(215, 197);
             this.technicianIDComboBox.Name = "technicianIDComboBox";
             this.technicianIDComboBox.Size = new System.Drawing.Size(251, 24);
             this.technicianIDComboBox.TabIndex = 8;
@@ -235,7 +235,7 @@
             this.sampleTypeIDComboBox.DataSource = this.sampleTypeBindingSource;
             this.sampleTypeIDComboBox.DisplayMember = "Description";
             this.sampleTypeIDComboBox.FormattingEnabled = true;
-            this.sampleTypeIDComboBox.Location = new System.Drawing.Point(159, 227);
+            this.sampleTypeIDComboBox.Location = new System.Drawing.Point(215, 227);
             this.sampleTypeIDComboBox.Name = "sampleTypeIDComboBox";
             this.sampleTypeIDComboBox.Size = new System.Drawing.Size(251, 24);
             this.sampleTypeIDComboBox.TabIndex = 10;
@@ -249,7 +249,7 @@
             // finalPriceTextBox
             // 
             this.finalPriceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.labTestRecordBindingSource, "FinalPrice", true));
-            this.finalPriceTextBox.Location = new System.Drawing.Point(159, 257);
+            this.finalPriceTextBox.Location = new System.Drawing.Point(215, 257);
             this.finalPriceTextBox.Name = "finalPriceTextBox";
             this.finalPriceTextBox.Size = new System.Drawing.Size(251, 22);
             this.finalPriceTextBox.TabIndex = 12;
@@ -258,7 +258,7 @@
             // resultSummaryTextBox
             // 
             this.resultSummaryTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.labTestRecordBindingSource, "ResultSummary", true));
-            this.resultSummaryTextBox.Location = new System.Drawing.Point(159, 285);
+            this.resultSummaryTextBox.Location = new System.Drawing.Point(215, 285);
             this.resultSummaryTextBox.Name = "resultSummaryTextBox";
             this.resultSummaryTextBox.Size = new System.Drawing.Size(251, 22);
             this.resultSummaryTextBox.TabIndex = 14;
@@ -278,11 +278,11 @@
             this.dataGridViewTextBoxColumn8,
             this.Delete});
             this.labTestRecordDataGridView.DataSource = this.labTestRecordBindingSource;
-            this.labTestRecordDataGridView.Location = new System.Drawing.Point(423, 111);
+            this.labTestRecordDataGridView.Location = new System.Drawing.Point(479, 111);
             this.labTestRecordDataGridView.Name = "labTestRecordDataGridView";
             this.labTestRecordDataGridView.RowHeadersWidth = 51;
             this.labTestRecordDataGridView.RowTemplate.Height = 24;
-            this.labTestRecordDataGridView.Size = new System.Drawing.Size(1053, 232);
+            this.labTestRecordDataGridView.Size = new System.Drawing.Size(1053, 257);
             this.labTestRecordDataGridView.TabIndex = 15;
             this.labTestRecordDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.labTestRecordDataGridView_CellClick);
             // 
@@ -302,9 +302,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(159, 313);
+            this.button1.Location = new System.Drawing.Point(215, 325);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 30);
+            this.button1.Size = new System.Drawing.Size(113, 43);
             this.button1.TabIndex = 16;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
@@ -312,9 +312,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(423, 349);
+            this.button2.Location = new System.Drawing.Point(479, 374);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 30);
+            this.button2.Size = new System.Drawing.Size(113, 43);
             this.button2.TabIndex = 17;
             this.button2.Text = "Updade";
             this.button2.UseVisualStyleBackColor = true;
@@ -322,9 +322,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(297, 313);
+            this.button3.Location = new System.Drawing.Point(353, 325);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 30);
+            this.button3.Size = new System.Drawing.Size(113, 43);
             this.button3.TabIndex = 18;
             this.button3.Text = "Clear";
             this.button3.UseVisualStyleBackColor = true;
@@ -361,7 +361,7 @@
             this.TestTypeID.DataPropertyName = "TestTypeID";
             this.TestTypeID.DataSource = this.testTypeBindingSource;
             this.TestTypeID.DisplayMember = "Name";
-            this.TestTypeID.HeaderText = "Test Type ID";
+            this.TestTypeID.HeaderText = "Test Type";
             this.TestTypeID.MinimumWidth = 6;
             this.TestTypeID.Name = "TestTypeID";
             this.TestTypeID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -373,7 +373,7 @@
             // 
             this.TechnicianID.DataPropertyName = "TechnicianID";
             this.TechnicianID.DataSource = this.technicianBindingSource;
-            this.TechnicianID.HeaderText = "Technician ID";
+            this.TechnicianID.HeaderText = "Technician Name";
             this.TechnicianID.MinimumWidth = 6;
             this.TechnicianID.Name = "TechnicianID";
             this.TechnicianID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -385,7 +385,7 @@
             this.SampleTypeID.DataPropertyName = "SampleTypeID";
             this.SampleTypeID.DataSource = this.sampleTypeBindingSource;
             this.SampleTypeID.DisplayMember = "Description";
-            this.SampleTypeID.HeaderText = "Sample Type ID";
+            this.SampleTypeID.HeaderText = "Sample Description";
             this.SampleTypeID.MinimumWidth = 6;
             this.SampleTypeID.Name = "SampleTypeID";
             this.SampleTypeID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -420,7 +420,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1488, 450);
+            this.ClientSize = new System.Drawing.Size(1544, 450);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
