@@ -36,6 +36,17 @@
             this.labTestRecordTableAdapter = new DiagnosticLab.DiagnosticLabDataSetTableAdapters.LabTestRecordTableAdapter();
             this.tableAdapterManager = new DiagnosticLab.DiagnosticLabDataSetTableAdapters.TableAdapterManager();
             this.labTestRecordDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboTechnician = new System.Windows.Forms.ComboBox();
             this.comboTestType = new System.Windows.Forms.ComboBox();
             this.comboSampleType = new System.Windows.Forms.ComboBox();
@@ -49,17 +60,6 @@
             this.txtPatientName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.diagnosticLabDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.labTestRecordBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.labTestRecordDataGridView)).BeginInit();
@@ -77,7 +77,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(396, 39);
+            this.button1.Location = new System.Drawing.Point(412, 39);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(101, 39);
             this.button1.TabIndex = 8;
@@ -131,115 +131,6 @@
             this.labTestRecordDataGridView.RowTemplate.Height = 24;
             this.labTestRecordDataGridView.Size = new System.Drawing.Size(928, 220);
             this.labTestRecordDataGridView.TabIndex = 10;
-            // 
-            // comboTechnician
-            // 
-            this.comboTechnician.FormattingEnabled = true;
-            this.comboTechnician.Location = new System.Drawing.Point(213, 71);
-            this.comboTechnician.Name = "comboTechnician";
-            this.comboTechnician.Size = new System.Drawing.Size(121, 24);
-            this.comboTechnician.TabIndex = 11;
-            // 
-            // comboTestType
-            // 
-            this.comboTestType.FormattingEnabled = true;
-            this.comboTestType.Location = new System.Drawing.Point(213, 101);
-            this.comboTestType.Name = "comboTestType";
-            this.comboTestType.Size = new System.Drawing.Size(121, 24);
-            this.comboTestType.TabIndex = 12;
-            // 
-            // comboSampleType
-            // 
-            this.comboSampleType.FormattingEnabled = true;
-            this.comboSampleType.Location = new System.Drawing.Point(213, 131);
-            this.comboSampleType.Name = "comboSampleType";
-            this.comboSampleType.Size = new System.Drawing.Size(121, 24);
-            this.comboSampleType.TabIndex = 13;
-            // 
-            // dateFrom
-            // 
-            this.dateFrom.Location = new System.Drawing.Point(115, 169);
-            this.dateFrom.Name = "dateFrom";
-            this.dateFrom.Size = new System.Drawing.Size(219, 22);
-            this.dateFrom.TabIndex = 14;
-            // 
-            // dateTo
-            // 
-            this.dateTo.Location = new System.Drawing.Point(396, 169);
-            this.dateTo.Name = "dateTo";
-            this.dateTo.Size = new System.Drawing.Size(220, 22);
-            this.dateTo.TabIndex = 15;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 74);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 16);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Technician Name:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 104);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 16);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Test Type:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 134);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 16);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Sample Type:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 169);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 16);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "From:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(349, 169);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 16);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "To:";
-            // 
-            // txtPatientName
-            // 
-            this.txtPatientName.Location = new System.Drawing.Point(213, 43);
-            this.txtPatientName.Name = "txtPatientName";
-            this.txtPatientName.Size = new System.Drawing.Size(121, 22);
-            this.txtPatientName.TabIndex = 21;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(36, 46);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 16);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Patient Name:";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(503, 39);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(101, 39);
-            this.button3.TabIndex = 23;
-            this.button3.Text = "Clear";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -335,6 +226,115 @@
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
             this.dataGridViewTextBoxColumn11.Width = 125;
+            // 
+            // comboTechnician
+            // 
+            this.comboTechnician.FormattingEnabled = true;
+            this.comboTechnician.Location = new System.Drawing.Point(229, 71);
+            this.comboTechnician.Name = "comboTechnician";
+            this.comboTechnician.Size = new System.Drawing.Size(121, 24);
+            this.comboTechnician.TabIndex = 11;
+            // 
+            // comboTestType
+            // 
+            this.comboTestType.FormattingEnabled = true;
+            this.comboTestType.Location = new System.Drawing.Point(229, 101);
+            this.comboTestType.Name = "comboTestType";
+            this.comboTestType.Size = new System.Drawing.Size(121, 24);
+            this.comboTestType.TabIndex = 12;
+            // 
+            // comboSampleType
+            // 
+            this.comboSampleType.FormattingEnabled = true;
+            this.comboSampleType.Location = new System.Drawing.Point(229, 131);
+            this.comboSampleType.Name = "comboSampleType";
+            this.comboSampleType.Size = new System.Drawing.Size(121, 24);
+            this.comboSampleType.TabIndex = 13;
+            // 
+            // dateFrom
+            // 
+            this.dateFrom.Location = new System.Drawing.Point(131, 169);
+            this.dateFrom.Name = "dateFrom";
+            this.dateFrom.Size = new System.Drawing.Size(219, 22);
+            this.dateFrom.TabIndex = 14;
+            // 
+            // dateTo
+            // 
+            this.dateTo.Location = new System.Drawing.Point(412, 169);
+            this.dateTo.Name = "dateTo";
+            this.dateTo.Size = new System.Drawing.Size(220, 22);
+            this.dateTo.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(36, 74);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 16);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Technician Name:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(36, 104);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Test Type:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(36, 134);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(128, 16);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Sample Description:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(36, 169);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 16);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "From:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(365, 169);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(27, 16);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "To:";
+            // 
+            // txtPatientName
+            // 
+            this.txtPatientName.Location = new System.Drawing.Point(229, 43);
+            this.txtPatientName.Name = "txtPatientName";
+            this.txtPatientName.Size = new System.Drawing.Size(121, 22);
+            this.txtPatientName.TabIndex = 21;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(36, 46);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(91, 16);
+            this.label6.TabIndex = 22;
+            this.label6.Text = "Patient Name:";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(519, 39);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(101, 39);
+            this.button3.TabIndex = 23;
+            this.button3.Text = "Clear";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // frmByMoreParam
             // 
