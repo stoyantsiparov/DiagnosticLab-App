@@ -63,6 +63,16 @@ namespace DiagnosticLab.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_15_05_2025_г___23_35_47 {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image 15.05.2025 г., 23_35_47", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Lists_Icon_Uniform {
             get {
                 object obj = ResourceManager.GetObject("Lists_Icon_Uniform", resourceCulture);
@@ -83,6 +93,16 @@ namespace DiagnosticLab.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sampletype {
+            get {
+                object obj = ResourceManager.GetObject("sampletype", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Search_Icon_Uniform {
             get {
                 object obj = ResourceManager.GetObject("Search_Icon_Uniform", resourceCulture);
@@ -96,6 +116,16 @@ namespace DiagnosticLab.Properties {
         internal static System.Drawing.Bitmap Support_Icon_Uniform {
             get {
                 object obj = ResourceManager.GetObject("Support_Icon_Uniform", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap лаб {
+            get {
+                object obj = ResourceManager.GetObject("лаб", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
