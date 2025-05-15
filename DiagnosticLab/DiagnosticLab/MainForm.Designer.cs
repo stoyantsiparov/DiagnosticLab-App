@@ -65,8 +65,9 @@
             this.testTToolStripMenuItem,
             this.technicianToolStripMenuItem,
             this.sampleTypeToolStripMenuItem});
+            this.supportToolStripMenuItem.Image = global::DiagnosticLab.Properties.Resources.Support_Icon_Uniform;
             this.supportToolStripMenuItem.Name = "supportToolStripMenuItem";
-            this.supportToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.supportToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
             this.supportToolStripMenuItem.Text = "Support";
             // 
             // testTToolStripMenuItem
@@ -96,8 +97,9 @@
             this.testTypeToolStripMenuItem,
             this.technicianToolStripMenuItem1,
             this.sampleTypeToolStripMenuItem1});
+            this.listToolStripMenuItem.Image = global::DiagnosticLab.Properties.Resources.Lists_Icon_Uniform;
             this.listToolStripMenuItem.Name = "listToolStripMenuItem";
-            this.listToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
+            this.listToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.listToolStripMenuItem.Text = "Lists";
             // 
             // testTypeToolStripMenuItem
@@ -123,8 +125,9 @@
             // 
             // recordsToolStripMenuItem
             // 
+            this.recordsToolStripMenuItem.Image = global::DiagnosticLab.Properties.Resources.Records_Icon_Uniform;
             this.recordsToolStripMenuItem.Name = "recordsToolStripMenuItem";
-            this.recordsToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.recordsToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
             this.recordsToolStripMenuItem.Text = "Records";
             this.recordsToolStripMenuItem.Click += new System.EventHandler(this.recordsToolStripMenuItem_Click);
             // 
@@ -133,8 +136,9 @@
             this.searchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.byOneParameterToolStripMenuItem,
             this.byMoreParametersToolStripMenuItem});
+            this.searchToolStripMenuItem.Image = global::DiagnosticLab.Properties.Resources.Search_Icon_Uniform;
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
             this.searchToolStripMenuItem.Text = "Search";
             // 
             // byOneParameterToolStripMenuItem

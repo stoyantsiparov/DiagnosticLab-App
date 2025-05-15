@@ -10,7 +10,7 @@ namespace DiagnosticLab
         {
             InitializeComponent();
             WindowState = FormWindowState.Maximized; // Максимизиране на прозореца
-            ApplyStyle(ColorTranslator.FromHtml("#FFFBDE"));
+            ApplyStyle(ColorTranslator.FromHtml("#129990"));
         }
 
         private void testTypeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -91,7 +91,7 @@ namespace DiagnosticLab
                         break;
 
                     case MenuStrip menu:
-                        menu.BackColor = ColorTranslator.FromHtml("#90D1CA");
+                        menu.BackColor = ColorTranslator.FromHtml("#FFFBDE");
                         menu.ForeColor = Color.Black;
                         menu.Font = new Font("Segoe UI", 14, FontStyle.Bold);
                         break;
