@@ -29,7 +29,7 @@ namespace DiagnosticLab
 
             if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName))
             {
-                MessageBox.Show("Моля, попълнете първо и фамилно име.", "Валидиране", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please fill in your first and last name.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -46,7 +46,7 @@ namespace DiagnosticLab
                 conn.Close();
             }
 
-            MessageBox.Show("Нов лаборант е добавен успешно.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("A new lab assistant has been added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // Изчистване на полетата
             firstNameTextBox.Clear();
