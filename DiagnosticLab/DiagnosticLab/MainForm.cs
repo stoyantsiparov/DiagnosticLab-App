@@ -10,7 +10,7 @@ namespace DiagnosticLab
         {
             InitializeComponent();
             WindowState = FormWindowState.Maximized; // Максимизиране на прозореца
-            ApplyStyle();
+            ApplyStyle(ColorTranslator.FromHtml("#FFFBDE"));
         }
 
         private void testTypeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -76,7 +76,7 @@ namespace DiagnosticLab
             frm.Show();
         }
 
-        private void ApplyStyle()
+        private void ApplyStyle(Color color)
         {
             this.BackColor = ColorTranslator.FromHtml("#FFFBDE");
             this.IsMdiContainer = true; // За поддръжка на MDI стил
@@ -95,6 +95,15 @@ namespace DiagnosticLab
                         menu.ForeColor = Color.Black;
                         menu.Font = new Font("Segoe UI", 9, FontStyle.Bold);
                         break;
+                }
+            }
+
+            foreach (Control c in this.Controls)
+            {
+                if (c is MdiClient client)
+                {
+                    client.BackColor = color;
+                    break;
                 }
             }
         }
