@@ -16,7 +16,7 @@ namespace DiagnosticLab
         public frmByMoreParam()
         {
             InitializeComponent();
-            Load += frmByMoreParam_Load; // добавяме обработчик на събитието Load
+            Load += frmByMoreParam_Load; // Зареждане на данни при зареждане на формата
             ApplyStyle();
 
         }
@@ -30,14 +30,14 @@ namespace DiagnosticLab
         {
             if (labTestRecordDataGridView.Rows.Count == 0)
             {
-                MessageBox.Show("Няма данни за експортиране.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("There is no data to export.", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             SaveFileDialog saveDialog = new SaveFileDialog
             {
                 Filter = "Excel Files|*.xlsx",
-                Title = "Изберете файл за запис",
+                Title = "Select a file to save",
                 FileName = "LabTestSearch.xlsx"
             };
 
@@ -109,7 +109,7 @@ namespace DiagnosticLab
             workbook.Close(false);
             excelApp.Quit();
 
-            MessageBox.Show("Данните са успешно експортирани в Excel.", "Готово", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("The data has been successfully exported to Excel.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -233,7 +233,7 @@ namespace DiagnosticLab
 
             labTestRecordDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
-
+        
         private void ApplyStyle()
         {
             this.BackColor = ColorTranslator.FromHtml("#FFFBDE");
