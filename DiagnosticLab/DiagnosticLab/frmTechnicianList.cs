@@ -25,8 +25,8 @@ namespace DiagnosticLab
         {
             if (e.RowIndex >= 0 && technicianDataGridView.Columns[e.ColumnIndex].Name == "Delete")
             {
-                var confirm = MessageBox.Show("Сигурни ли сте, че искате да изтриете този запис?",
-                    "Потвърждение",
+                var confirm = MessageBox.Show("Are you sure you want to delete this entry?",
+                    "Confirmation",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Warning);
 
@@ -73,12 +73,12 @@ namespace DiagnosticLab
                     conn.Close();
                 }
 
-                MessageBox.Show("Записът е успешно обновен.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("The record has been successfully updated.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadTechnicians();
             }
             else
             {
-                MessageBox.Show("Няма избран ред за запис.", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No recording line selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
