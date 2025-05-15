@@ -33,13 +33,13 @@ namespace DiagnosticLab
 
             if (string.IsNullOrEmpty(description))
             {
-                MessageBox.Show("Моля, въведете описание на пробата.", "Валидиране", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter a sample description.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (!isValidTime)
             {
-                MessageBox.Show("Моля, въведете валидна стойност за максимално време за съхранение (в часове).", "Валидиране", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter a valid value for maximum retention time (in hours).", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -57,7 +57,7 @@ namespace DiagnosticLab
                 conn.Close();
             }
 
-            MessageBox.Show("Нов тип проба е добавен успешно.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("New sample type added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // Изчистване на полетата
             descriptionTextBox.Clear();
