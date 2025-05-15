@@ -86,14 +86,14 @@ namespace DiagnosticLab
                 switch (ctrl)
                 {
                     case Label lbl:
-                        lbl.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                        lbl.Font = new Font("Segoe UI", 15, FontStyle.Bold);
                         lbl.ForeColor = ColorTranslator.FromHtml("#096B68");
                         break;
 
                     case MenuStrip menu:
                         menu.BackColor = ColorTranslator.FromHtml("#90D1CA");
                         menu.ForeColor = Color.Black;
-                        menu.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+                        menu.Font = new Font("Segoe UI", 14, FontStyle.Bold);
                         break;
                 }
             }
