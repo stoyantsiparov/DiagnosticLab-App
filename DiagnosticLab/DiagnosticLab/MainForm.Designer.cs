@@ -149,7 +149,7 @@
             // 
             // byOneParameterToolStripMenuItem
             // 
-            this.byOneParameterToolStripMenuItem.Image = global::DiagnosticLab.Properties.Resources.Search_Icon_Uniform;
+            this.byOneParameterToolStripMenuItem.Image = global::DiagnosticLab.Properties.Resources.sear;
             this.byOneParameterToolStripMenuItem.Name = "byOneParameterToolStripMenuItem";
             this.byOneParameterToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
             this.byOneParameterToolStripMenuItem.Text = "By one parameter";
@@ -157,7 +157,7 @@
             // 
             // byMoreParametersToolStripMenuItem
             // 
-            this.byMoreParametersToolStripMenuItem.Image = global::DiagnosticLab.Properties.Resources.Search_Icon_Uniform;
+            this.byMoreParametersToolStripMenuItem.Image = global::DiagnosticLab.Properties.Resources.sear;
             this.byMoreParametersToolStripMenuItem.Name = "byMoreParametersToolStripMenuItem";
             this.byMoreParametersToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
             this.byMoreParametersToolStripMenuItem.Text = "By more parameters";

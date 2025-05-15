@@ -103,6 +103,16 @@ namespace DiagnosticLab.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sear {
+            get {
+                object obj = ResourceManager.GetObject("sear", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Search_Icon_Uniform {
             get {
                 object obj = ResourceManager.GetObject("Search_Icon_Uniform", resourceCulture);
