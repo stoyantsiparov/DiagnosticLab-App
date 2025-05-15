@@ -21,6 +21,7 @@ namespace DiagnosticLab
             LoadComboBoxes();
             LoadLabTestRecords();
             ApplyStyle();
+            testTypeIDComboBox.SelectedIndexChanged += TestTypeIDComboBox_SelectedIndexChanged; // Задава крайна цена на теста
         }
 
         private void LoadLabTestRecords()
@@ -145,7 +146,7 @@ namespace DiagnosticLab
             }
 
             LoadLabTestRecords();
-            MessageBox.Show("Записът е добавен успешно.");
+            MessageBox.Show("The record was added successfully.");
         }
 
         private void labTestRecordDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -233,7 +234,7 @@ namespace DiagnosticLab
             }
 
             LoadLabTestRecords();
-            MessageBox.Show("Записите са обновени успешно.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("The records have been updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -249,6 +250,30 @@ namespace DiagnosticLab
             testDateDateTimePicker.Value = DateTime.Now;
 
             patientNameTextBox.Focus(); // Курсорът отива в първото поле
+        }
+
+        private void TestTypeIDComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (testTypeIDComboBox.SelectedValue == null || testTypeIDComboBox.SelectedIndex == -1)
+                return;
+
+            int selectedTestTypeID = Convert.ToInt32(testTypeIDComboBox.SelectedValue);
+
+            using (var con = new SqlConnection(connectionString))
+            using (var cmd = new SqlCommand("SELECT BasePrice FROM TestType WHERE TestTypeID = @id", con))
+            {
+                cmd.Parameters.AddWithValue("@id", selectedTestTypeID);
+                con.Open();
+
+                object result = cmd.ExecuteScalar();
+                con.Close();
+
+                if (result != null && decimal.TryParse(result.ToString(), out decimal basePrice))
+                {
+                    decimal finalPrice = basePrice * 1.20m; // +20%
+                    finalPriceTextBox.Text = finalPrice.ToString("0.00");
+                }
+            }
         }
 
         private void ApplyStyle()
