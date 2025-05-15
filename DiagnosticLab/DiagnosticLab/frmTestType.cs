@@ -26,13 +26,13 @@ namespace DiagnosticLab
             string name = nameTextBox.Text.Trim();
             if (!decimal.TryParse(basePriceTextBox.Text.Trim(), out decimal basePrice))
             {
-                MessageBox.Show("Моля, въведете валидна стойност за базова цена.", "Валидиране", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter a valid base price value.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (string.IsNullOrEmpty(name))
             {
-                MessageBox.Show("Моля, въведете име на теста.", "Валидиране", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter a test name.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -48,7 +48,7 @@ namespace DiagnosticLab
                 conn.Close();
             }
 
-            MessageBox.Show("Нов тестов тип е добавен успешно.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("New test type added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // Изчистване на полетата за нов запис
             nameTextBox.Clear();
