@@ -13,19 +13,27 @@ namespace DiagnosticLab
         private string connectionString =
             "Data Source=OMEN\\SQLEXPRESS;Initial Catalog=DiagnosticLab;Integrated Security=True;TrustServerCertificate=True";
 
+        /// <summary>
+        /// Initializes a new instance of the frmByMoreParam form and applies styles.
+        /// </summary>
         public frmByMoreParam()
         {
             InitializeComponent();
-            Load += frmByMoreParam_Load; // Зареждане на данни при зареждане на формата
+            Load += frmByMoreParam_Load;
             ApplyStyle();
-
         }
 
+        /// <summary>
+        /// Handles the search button click event to search records.
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             SearchRecords();
         }
 
+        /// <summary>
+        /// Handles the export button click event to export data to Excel.
+        /// </summary>
         private void button2_Click(object sender, EventArgs e)
         {
             if (labTestRecordDataGridView.Rows.Count == 0)
@@ -112,6 +120,9 @@ namespace DiagnosticLab
             MessageBox.Show("The data has been successfully exported to Excel.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        /// <summary>
+        /// Handles the reset button click event to clear filters and reload records.
+        /// </summary>
         private void button3_Click(object sender, EventArgs e)
         {
             txtPatientName.Clear();
@@ -126,15 +137,20 @@ namespace DiagnosticLab
             SearchRecords();
         }
 
+        /// <summary>
+        /// Handles the form load event to load filters and search records.
+        /// </summary>
         private void frmByMoreParam_Load(object sender, EventArgs e)
         {
             LoadFilters();
             SearchRecords();
         }
 
+        /// <summary>
+        /// Loads filter data for technician, test type, and sample type combo boxes.
+        /// </summary>
         private void LoadFilters()
         {
-            // Technician
             using (var da = new SqlDataAdapter(
                        "SELECT TechnicianID, FirstName + ' ' + LastName AS FullName FROM Technician", connectionString))
             {
@@ -146,7 +162,6 @@ namespace DiagnosticLab
                 comboTechnician.SelectedIndex = -1;
             }
 
-            // TestType
             using (var da = new SqlDataAdapter("SELECT TestTypeID, Name FROM TestType", connectionString))
             {
                 DataTable dt = new DataTable();
@@ -157,7 +172,6 @@ namespace DiagnosticLab
                 comboTestType.SelectedIndex = -1;
             }
 
-            // SampleType
             using (var da = new SqlDataAdapter("SELECT SampleTypeID, Description FROM SampleType", connectionString))
             {
                 DataTable dt = new DataTable();
@@ -168,28 +182,30 @@ namespace DiagnosticLab
                 comboSampleType.SelectedIndex = -1;
             }
 
-            // Дати по подразбиране
             dateFrom.Value = DateTime.Now.AddMonths(-1);
             dateTo.Value = DateTime.Now.AddMonths(1);
         }
 
+        /// <summary>
+        /// Searches and loads lab test records based on the selected filters.
+        /// </summary>
         private void SearchRecords()
         {
             string query = @"
-        SELECT 
-            l.LabTestID,
-            l.PatientName,
-            l.TestDate,
-            t.Name AS TestType,
-            tech.FirstName + ' ' + tech.LastName AS Technician,
-            s.Description AS Sample,
-            l.FinalPrice,
-            l.ResultSummary
-        FROM LabTestRecord l
-        JOIN TestType t ON l.TestTypeID = t.TestTypeID
-        JOIN Technician tech ON l.TechnicianID = tech.TechnicianID
-        JOIN SampleType s ON l.SampleTypeID = s.SampleTypeID
-        WHERE 1=1";
+            SELECT 
+                l.LabTestID,
+                l.PatientName,
+                l.TestDate,
+                t.Name AS TestType,
+                tech.FirstName + ' ' + tech.LastName AS Technician,
+                s.Description AS Sample,
+                l.FinalPrice,
+                l.ResultSummary
+            FROM LabTestRecord l
+            JOIN TestType t ON l.TestTypeID = t.TestTypeID
+            JOIN Technician tech ON l.TechnicianID = tech.TechnicianID
+            JOIN SampleType s ON l.SampleTypeID = s.SampleTypeID
+            WHERE 1=1";
 
             var parameters = new List<SqlParameter>();
 
@@ -233,7 +249,10 @@ namespace DiagnosticLab
 
             labTestRecordDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
-        
+
+        /// <summary>
+        /// Applies custom styles to the form and its controls.
+        /// </summary>
         private void ApplyStyle()
         {
             this.BackColor = ColorTranslator.FromHtml("#FFFBDE");

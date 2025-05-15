@@ -8,20 +8,28 @@ namespace DiagnosticLab
 {
     public partial class frmSampleType : Form
     {
+        /// <summary>
+        /// Initializes a new instance of the frmSampleType form and applies the style.
+        /// </summary>
         public frmSampleType()
         {
             InitializeComponent();
             ApplyStyle();
         }
 
+        /// <summary>
+        /// Handles the Load event of the frmSampleType form. Adds a new item to the binding source.
+        /// </summary>
         private void frmSampleType_Load(object sender, EventArgs e)
         {
             this.sampleTypeBindingSource.AddNew();
-
         }
 
         private string connectionString = "Data Source=OMEN\\SQLEXPRESS;Initial Catalog=DiagnosticLab;Integrated Security=True;TrustServerCertificate=True";
 
+        /// <summary>
+        /// Handles the Click event of the button1 control. Validates input and inserts a new sample type into the database.
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             string description = descriptionTextBox.Text.Trim();
@@ -59,7 +67,6 @@ namespace DiagnosticLab
 
             MessageBox.Show("New sample type added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            // Изчистване на полетата
             descriptionTextBox.Clear();
             storageTemperatureTextBox.Clear();
             maxHoldingTimeHrsTextBox.Clear();
@@ -67,6 +74,9 @@ namespace DiagnosticLab
             descriptionTextBox.Focus();
         }
 
+        /// <summary>
+        /// Applies custom styles to the form and its controls.
+        /// </summary>
         private void ApplyStyle()
         {
             this.BackColor = ColorTranslator.FromHtml("#FFFBDE");

@@ -11,19 +11,28 @@ namespace DiagnosticLab
         private string connectionString =
             "Data Source=OMEN\\SQLEXPRESS;Initial Catalog=DiagnosticLab;Integrated Security=True;TrustServerCertificate=True";
 
+        /// <summary>
+        /// Initializes a new instance of the frmLabTestRecord form.
+        /// </summary>
         public frmLabTestRecord()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Handles the form load event. Loads combo boxes, lab test records, applies style, and sets up event handlers.
+        /// </summary>
         private void frmLabTestRecord_Load(object sender, EventArgs e)
         {
             LoadComboBoxes();
             LoadLabTestRecords();
             ApplyStyle();
-            testTypeIDComboBox.SelectedIndexChanged += TestTypeIDComboBox_SelectedIndexChanged; // Задава крайна цена на теста
+            testTypeIDComboBox.SelectedIndexChanged += TestTypeIDComboBox_SelectedIndexChanged;
         }
 
+        /// <summary>
+        /// Loads all lab test records from the database and configures DataGridView columns.
+        /// </summary>
         private void LoadLabTestRecords()
         {
             using (var con = new SqlConnection(connectionString))
@@ -34,11 +43,13 @@ namespace DiagnosticLab
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 labTestRecordDataGridView.DataSource = dt;
-
                 ConfigureComboBoxColumns();
             }
         }
 
+        /// <summary>
+        /// Configures DataGridView ComboBox columns for Technician, TestType, and SampleType.
+        /// </summary>
         private void ConfigureComboBoxColumns()
         {
             if (labTestRecordDataGridView.Columns["TechnicianID"] is DataGridViewComboBoxColumn techCol)
@@ -66,23 +77,23 @@ namespace DiagnosticLab
             }
         }
 
+        /// <summary>
+        /// Loads data for Technician, TestType, and SampleType combo boxes.
+        /// </summary>
         private void LoadComboBoxes()
         {
-            // Technician
             var techDt = GetTechnicianTable();
             technicianIDComboBox.DataSource = techDt;
             technicianIDComboBox.DisplayMember = "FullName";
             technicianIDComboBox.ValueMember = "TechnicianID";
             technicianIDComboBox.SelectedIndex = -1;
 
-            // TestType
             var testDt = GetTestTypeTable();
             testTypeIDComboBox.DataSource = testDt;
             testTypeIDComboBox.DisplayMember = "Name";
             testTypeIDComboBox.ValueMember = "TestTypeID";
             testTypeIDComboBox.SelectedIndex = -1;
 
-            // SampleType
             var sampleDt = GetSampleTypeTable();
             sampleTypeIDComboBox.DataSource = sampleDt;
             sampleTypeIDComboBox.DisplayMember = "Description";
@@ -90,6 +101,10 @@ namespace DiagnosticLab
             sampleTypeIDComboBox.SelectedIndex = -1;
         }
 
+        /// <summary>
+        /// Retrieves the technician table from the database.
+        /// </summary>
+        /// <returns>DataTable containing technician information.</returns>
         private DataTable GetTechnicianTable()
         {
             var dt = new DataTable();
@@ -98,10 +113,13 @@ namespace DiagnosticLab
             {
                 da.Fill(dt);
             }
-
             return dt;
         }
 
+        /// <summary>
+        /// Retrieves the test type table from the database.
+        /// </summary>
+        /// <returns>DataTable containing test type information.</returns>
         private DataTable GetTestTypeTable()
         {
             var dt = new DataTable();
@@ -109,10 +127,13 @@ namespace DiagnosticLab
             {
                 da.Fill(dt);
             }
-
             return dt;
         }
 
+        /// <summary>
+        /// Retrieves the sample type table from the database.
+        /// </summary>
+        /// <returns>DataTable containing sample type information.</returns>
         private DataTable GetSampleTypeTable()
         {
             var dt = new DataTable();
@@ -121,17 +142,18 @@ namespace DiagnosticLab
             {
                 da.Fill(dt);
             }
-
             return dt;
         }
 
+        /// <summary>
+        /// Handles the click event for the add button. Inserts a new lab test record into the database.
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             using (var con = new SqlConnection(connectionString))
             using (var cmd = new SqlCommand("sp_InsertLabTest", con))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
-
                 cmd.Parameters.AddWithValue("@PatientName", patientNameTextBox.Text.Trim());
                 cmd.Parameters.AddWithValue("@TestDate", testDateDateTimePicker.Value.Date);
                 cmd.Parameters.AddWithValue("@TestTypeID", testTypeIDComboBox.SelectedValue);
@@ -139,16 +161,17 @@ namespace DiagnosticLab
                 cmd.Parameters.AddWithValue("@SampleTypeID", sampleTypeIDComboBox.SelectedValue);
                 cmd.Parameters.AddWithValue("@FinalPrice", decimal.Parse(finalPriceTextBox.Text.Trim()));
                 cmd.Parameters.AddWithValue("@ResultSummary", resultSummaryTextBox.Text.Trim());
-
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
-
             LoadLabTestRecords();
             MessageBox.Show("The record was added successfully.");
         }
 
+        /// <summary>
+        /// Handles the cell click event for the DataGridView, including deleting records.
+        /// </summary>
         private void labTestRecordDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0 || e.ColumnIndex < 0)
@@ -180,22 +203,22 @@ namespace DiagnosticLab
                         cmd.ExecuteNonQuery();
                         con.Close();
                     }
-
                     LoadLabTestRecords();
                 }
             }
         }
 
+        /// <summary>
+        /// Handles the click event for the update button. Updates or inserts lab test records from the DataGridView.
+        /// </summary>
         private void button2_Click(object sender, EventArgs e)
         {
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
-
                 foreach (DataGridViewRow row in labTestRecordDataGridView.Rows)
                 {
                     if (row.IsNewRow) continue;
-
                     if (!int.TryParse(Convert.ToString(row.Cells[3].Value), out int testTypeId)) continue;
                     if (!int.TryParse(Convert.ToString(row.Cells[4].Value), out int techId)) continue;
                     if (!int.TryParse(Convert.ToString(row.Cells[5].Value), out int sampleId)) continue;
@@ -229,29 +252,30 @@ namespace DiagnosticLab
 
                     cmd.ExecuteNonQuery();
                 }
-
                 con.Close();
             }
-
             LoadLabTestRecords();
             MessageBox.Show("The records have been updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        /// <summary>
+        /// Handles the click event for the clear button. Clears all input fields and resets controls.
+        /// </summary>
         private void button3_Click(object sender, EventArgs e)
         {
             patientNameTextBox.Clear();
             finalPriceTextBox.Clear();
             resultSummaryTextBox.Clear();
-
             testTypeIDComboBox.SelectedIndex = -1;
             technicianIDComboBox.SelectedIndex = -1;
             sampleTypeIDComboBox.SelectedIndex = -1;
-
             testDateDateTimePicker.Value = DateTime.Now;
-
-            patientNameTextBox.Focus(); // Курсорът отива в първото поле
+            patientNameTextBox.Focus();
         }
 
+        /// <summary>
+        /// Handles the SelectedIndexChanged event for the test type combo box. Sets the final price based on the selected test type.
+        /// </summary>
         private void TestTypeIDComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (testTypeIDComboBox.SelectedValue == null || testTypeIDComboBox.SelectedIndex == -1)
@@ -264,21 +288,22 @@ namespace DiagnosticLab
             {
                 cmd.Parameters.AddWithValue("@id", selectedTestTypeID);
                 con.Open();
-
                 object result = cmd.ExecuteScalar();
                 con.Close();
 
                 if (result != null && decimal.TryParse(result.ToString(), out decimal basePrice))
                 {
-                    decimal finalPrice = basePrice * 1.20m; // +20%
+                    decimal finalPrice = basePrice * 1.20m;
                     finalPriceTextBox.Text = finalPrice.ToString("0.00");
                 }
             }
         }
 
+        /// <summary>
+        /// Applies custom styles to the form and its controls.
+        /// </summary>
         private void ApplyStyle()
         {
-            // Основен фон на формата
             this.BackColor = ColorTranslator.FromHtml("#FFFBDE");
 
             foreach (Control ctrl in this.Controls)
@@ -289,7 +314,6 @@ namespace DiagnosticLab
                         lbl.Font = new Font("Segoe UI", 10, FontStyle.Bold);
                         lbl.ForeColor = ColorTranslator.FromHtml("#096B68");
                         break;
-
                     case Button btn:
                         btn.FlatStyle = FlatStyle.Flat;
                         btn.BackColor = ColorTranslator.FromHtml("#90D1CA");
@@ -297,22 +321,18 @@ namespace DiagnosticLab
                         btn.Font = new Font("Segoe UI", 10);
                         btn.Cursor = Cursors.Hand;
                         break;
-
                     case ComboBox cmb:
                         cmb.Font = new Font("Segoe UI", 9);
                         break;
-
                     case TextBox tb:
                         tb.Font = new Font("Segoe UI", 9);
                         break;
-
                     case DateTimePicker dtp:
                         dtp.Font = new Font("Segoe UI", 9);
                         break;
                 }
             }
 
-            // Стилизация на DataGridView
             labTestRecordDataGridView.EnableHeadersVisualStyles = false;
             labTestRecordDataGridView.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#129990");
             labTestRecordDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;

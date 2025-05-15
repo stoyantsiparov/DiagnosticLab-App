@@ -15,27 +15,30 @@ namespace DiagnosticLab
 
         private string connectionString = "Data Source=OMEN\\SQLEXPRESS;Initial Catalog=DiagnosticLab;Integrated Security=True;TrustServerCertificate=True";
 
+        /// <summary>
+        /// Handles the form load event. Loads test types and applies UI styles.
+        /// </summary>
         private void frmTestTypeList_Load(object sender, EventArgs e)
         {
             LoadTestTypes();
             ApplyStyle();
         }
 
+        /// <summary>
+        /// Handles cell click events in the DataGridView, including deleting a test type.
+        /// </summary>
         private void testTypeDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && testTypeDataGridView.Columns[e.ColumnIndex].Name == "Delete")
             {
-                // Потвърждение от потребителя
                 var confirm = MessageBox.Show("Are you sure you want to delete this entry?",
                     "Confirmation",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Warning);
                 if (confirm == DialogResult.Yes)
                 {
-                    // Вземане на ID от избрания ред
                     int testTypeId = Convert.ToInt32(testTypeDataGridView.Rows[e.RowIndex].Cells[0].Value);
 
-                    // Извикване на процедурата
                     using (SqlConnection conn = new SqlConnection(connectionString))
                     using (SqlCommand cmd = new SqlCommand("sp_TestType_Delete", conn))
                     {
@@ -47,17 +50,18 @@ namespace DiagnosticLab
                         conn.Close();
                     }
 
-                    // Обновяване на данните в грида
                     LoadTestTypes();
                 }
             }
         }
 
+        /// <summary>
+        /// Handles the update button click event to update the selected test type.
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             if (testTypeDataGridView.CurrentRow != null)
             {
-                // Вземане на стойности от текущо избрания ред
                 int testTypeId = Convert.ToInt32(testTypeDataGridView.CurrentRow.Cells[0].Value);
                 string name = testTypeDataGridView.CurrentRow.Cells[1].Value.ToString();
                 decimal basePrice = Convert.ToDecimal(testTypeDataGridView.CurrentRow.Cells[2].Value);
@@ -66,8 +70,6 @@ namespace DiagnosticLab
                 using (SqlCommand cmd = new SqlCommand("sp_TestType_Update", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-
-                    // Параметри за процедурата
                     cmd.Parameters.AddWithValue("@TestTypeID", testTypeId);
                     cmd.Parameters.AddWithValue("@Name", name);
                     cmd.Parameters.AddWithValue("@BasePrice", basePrice);
@@ -86,6 +88,9 @@ namespace DiagnosticLab
             }
         }
 
+        /// <summary>
+        /// Loads test types from the database and binds them to the DataGridView.
+        /// </summary>
         private void LoadTestTypes()
         {
             DataTable dt = new DataTable();
@@ -102,6 +107,9 @@ namespace DiagnosticLab
             testTypeDataGridView.DataSource = dt;
         }
 
+        /// <summary>
+        /// Applies custom styles to the form and its controls.
+        /// </summary>
         private void ApplyStyle()
         {
             this.BackColor = ColorTranslator.FromHtml("#FFFBDE");

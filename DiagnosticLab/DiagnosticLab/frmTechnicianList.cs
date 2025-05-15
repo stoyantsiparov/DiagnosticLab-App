@@ -16,11 +16,17 @@ namespace DiagnosticLab
 
         private string connectionString = "Data Source=OMEN\\SQLEXPRESS;Initial Catalog=DiagnosticLab;Integrated Security=True;TrustServerCertificate=True";
 
+        /// <summary>
+        /// Handles the form load event and loads the list of technicians.
+        /// </summary>
         private void frmTechnicianList_Load(object sender, EventArgs e)
         {
             LoadTechnicians();
         }
 
+        /// <summary>
+        /// Handles cell click events in the DataGridView, specifically for deleting a technician.
+        /// </summary>
         private void technicianDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && technicianDataGridView.Columns[e.ColumnIndex].Name == "Delete")
@@ -50,6 +56,9 @@ namespace DiagnosticLab
             }
         }
 
+        /// <summary>
+        /// Handles the update button click event to update the selected technician's information.
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             if (technicianDataGridView.CurrentRow != null)
@@ -82,6 +91,9 @@ namespace DiagnosticLab
             }
         }
 
+        /// <summary>
+        /// Loads the list of technicians from the database and binds it to the DataGridView.
+        /// </summary>
         private void LoadTechnicians()
         {
             DataTable dt = new DataTable();
@@ -98,6 +110,9 @@ namespace DiagnosticLab
             technicianDataGridView.DataSource = dt;
         }
 
+        /// <summary>
+        /// Applies custom styles to the form and its controls.
+        /// </summary>
         private void ApplyStyle()
         {
             this.BackColor = ColorTranslator.FromHtml("#FFFBDE");

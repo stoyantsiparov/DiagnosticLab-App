@@ -6,13 +6,19 @@ namespace DiagnosticLab
 {
     public partial class MainForm : Form
     {
+        /// <summary>
+        /// Initializes a new instance of the MainForm class and applies the initial style.
+        /// </summary>
         public MainForm()
         {
             InitializeComponent();
-            WindowState = FormWindowState.Maximized; // Максимизиране на прозореца
+            WindowState = FormWindowState.Maximized;
             ApplyStyle(ColorTranslator.FromHtml("#129990"));
         }
 
+        /// <summary>
+        /// Opens the Test Type form as an MDI child.
+        /// </summary>
         private void testTypeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new frmTestType();
@@ -20,6 +26,9 @@ namespace DiagnosticLab
             frm.Show();
         }
 
+        /// <summary>
+        /// Opens the Technician form as an MDI child.
+        /// </summary>
         private void technicianToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new frmTechnician();
@@ -27,6 +36,9 @@ namespace DiagnosticLab
             frm.Show();
         }
 
+        /// <summary>
+        /// Opens the Sample Type form as an MDI child.
+        /// </summary>
         private void sampleTypeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new frmSampleType();
@@ -34,6 +46,9 @@ namespace DiagnosticLab
             frm.Show();
         }
 
+        /// <summary>
+        /// Opens the Test Type List form as an MDI child.
+        /// </summary>
         private void testTypeToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             var frm = new frmTestTypeList();
@@ -41,6 +56,9 @@ namespace DiagnosticLab
             frm.Show();
         }
 
+        /// <summary>
+        /// Opens the Technician List form as an MDI child.
+        /// </summary>
         private void technicianToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             var frm = new frmTechnicianList();
@@ -48,6 +66,9 @@ namespace DiagnosticLab
             frm.Show();
         }
 
+        /// <summary>
+        /// Opens the Sample Type List form as an MDI child.
+        /// </summary>
         private void sampleTypeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             var frm = new frmSampleTypeList();
@@ -55,6 +76,9 @@ namespace DiagnosticLab
             frm.Show();
         }
 
+        /// <summary>
+        /// Opens the Lab Test Record form as an MDI child.
+        /// </summary>
         private void recordsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new frmLabTestRecord();
@@ -62,6 +86,9 @@ namespace DiagnosticLab
             frm.Show();
         }
 
+        /// <summary>
+        /// Opens the By One Parameter form as an MDI child.
+        /// </summary>
         private void byOneParameterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new frmByOneParam();
@@ -69,6 +96,9 @@ namespace DiagnosticLab
             frm.Show();
         }
 
+        /// <summary>
+        /// Opens the By More Parameters form as an MDI child.
+        /// </summary>
         private void byMoreParametersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new frmByMoreParam();
@@ -76,10 +106,14 @@ namespace DiagnosticLab
             frm.Show();
         }
 
+        /// <summary>
+        /// Applies the specified color style to the form and its controls.
+        /// </summary>
+        /// <param name="color">The color to apply to the MDI client area.</param>
         private void ApplyStyle(Color color)
         {
             this.BackColor = ColorTranslator.FromHtml("#FFFBDE");
-            this.IsMdiContainer = true; // За поддръжка на MDI стил
+            this.IsMdiContainer = true;
 
             foreach (Control ctrl in this.Controls)
             {

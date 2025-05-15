@@ -12,13 +12,19 @@ namespace DiagnosticLab
         private string connectionString =
             "Data Source=OMEN\\SQLEXPRESS;Initial Catalog=DiagnosticLab;Integrated Security=True;TrustServerCertificate=True";
 
+        /// <summary>
+        /// Initializes a new instance of the frmByOneParam form and applies styles.
+        /// </summary>
         public frmByOneParam()
         {
             InitializeComponent();
-            Load += frmByOneParam_Load; // Зареждане на данни при зареждане на формата
+            Load += frmByOneParam_Load;
             ApplyStyle();
         }
 
+        /// <summary>
+        /// Handles the search button click event. Searches lab test records by keyword.
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             string keyword = textBox1.Text.Trim();
@@ -31,30 +37,30 @@ namespace DiagnosticLab
 
             using (var con = new SqlConnection(connectionString))
             using (var cmd = new SqlCommand(@"
-                SELECT 
-                    l.LabTestID,
-                    l.PatientName,
-                    l.TestDate,
-                    l.TestTypeID,
-                    l.TechnicianID,
-                    l.SampleTypeID,
-                    t.Name AS TestType,
-                    tech.FirstName + ' ' + tech.LastName AS Technician,
-                    s.Description AS Sample,
-                    l.FinalPrice,
-                    l.ResultSummary
-                FROM LabTestRecord l
-                JOIN TestType t ON l.TestTypeID = t.TestTypeID
-                JOIN Technician tech ON l.TechnicianID = tech.TechnicianID
-                JOIN SampleType s ON l.SampleTypeID = s.SampleTypeID
-                WHERE
-                    l.PatientName LIKE @kw OR
-                    l.ResultSummary LIKE @kw OR
-                    t.Name LIKE @kw OR
-                    tech.FirstName LIKE @kw OR
-                    tech.LastName LIKE @kw OR
-                    s.Description LIKE @kw
-            ", con))
+                    SELECT 
+                        l.LabTestID,
+                        l.PatientName,
+                        l.TestDate,
+                        l.TestTypeID,
+                        l.TechnicianID,
+                        l.SampleTypeID,
+                        t.Name AS TestType,
+                        tech.FirstName + ' ' + tech.LastName AS Technician,
+                        s.Description AS Sample,
+                        l.FinalPrice,
+                        l.ResultSummary
+                    FROM LabTestRecord l
+                    JOIN TestType t ON l.TestTypeID = t.TestTypeID
+                    JOIN Technician tech ON l.TechnicianID = tech.TechnicianID
+                    JOIN SampleType s ON l.SampleTypeID = s.SampleTypeID
+                    WHERE
+                        l.PatientName LIKE @kw OR
+                        l.ResultSummary LIKE @kw OR
+                        t.Name LIKE @kw OR
+                        tech.FirstName LIKE @kw OR
+                        tech.LastName LIKE @kw OR
+                        s.Description LIKE @kw
+                ", con))
             {
                 cmd.Parameters.AddWithValue("@kw", "%" + keyword + "%");
 
@@ -66,6 +72,9 @@ namespace DiagnosticLab
             HideTechnicalColumns();
         }
 
+        /// <summary>
+        /// Handles the export button click event. Exports the displayed data to an Excel file.
+        /// </summary>
         private void button2_Click(object sender, EventArgs e)
         {
             if (labTestRecordDataGridView.Rows.Count == 0)
@@ -106,7 +115,6 @@ namespace DiagnosticLab
 
             int startRow = 1;
 
-            // Записваме заглавия само ако е нов файл
             if (isNew)
             {
                 int colIndex = 1;
@@ -122,12 +130,10 @@ namespace DiagnosticLab
             }
             else
             {
-                // Намираме първия празен ред
                 while (worksheet.Cells[startRow, 1].Value != null)
                     startRow++;
             }
 
-            // Запис на данни
             for (int i = 0; i < labTestRecordDataGridView.Rows.Count; i++)
             {
                 int colIndex = 1;
@@ -144,7 +150,6 @@ namespace DiagnosticLab
 
             worksheet.Columns.AutoFit();
 
-            // Запазваме САМО ако файлът е нов
             if (isNew)
             {
                 workbook.SaveAs(filePath);
@@ -160,17 +165,26 @@ namespace DiagnosticLab
             MessageBox.Show("The data has been successfully exported to Excel.", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        /// <summary>
+        /// Handles the clear button click event. Clears the search box and reloads all records.
+        /// </summary>
         private void button3_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
             LoadAllLabTestRecords();
         }
 
+        /// <summary>
+        /// Handles the form load event. Loads all lab test records.
+        /// </summary>
         private void frmByOneParam_Load(object sender, EventArgs e)
         {
-            LoadAllLabTestRecords(); // зарежда всички данни при отваряне
+            LoadAllLabTestRecords();
         }
 
+        /// <summary>
+        /// Hides technical columns in the DataGridView.
+        /// </summary>
         private void HideTechnicalColumns()
         {
             string[] hiddenCols = { "LabTestID", "TestTypeID", "TechnicianID", "SampleTypeID" };
@@ -183,27 +197,30 @@ namespace DiagnosticLab
             labTestRecordDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
+        /// <summary>
+        /// Loads all lab test records from the database and displays them in the DataGridView.
+        /// </summary>
         private void LoadAllLabTestRecords()
         {
             using (var con = new SqlConnection(connectionString))
             using (var cmd = new SqlCommand(@"
-                SELECT 
-                    l.LabTestID,
-                    l.PatientName,
-                    l.TestDate,
-                    l.TestTypeID,
-                    l.TechnicianID,
-                    l.SampleTypeID,
-                    t.Name AS TestType,
-                    tech.FirstName + ' ' + tech.LastName AS Technician,
-                    s.Description AS Sample,
-                    l.FinalPrice,
-                    l.ResultSummary
-                FROM LabTestRecord l
-                JOIN TestType t ON l.TestTypeID = t.TestTypeID
-                JOIN Technician tech ON l.TechnicianID = tech.TechnicianID
-                JOIN SampleType s ON l.SampleTypeID = s.SampleTypeID
-            ", con))
+                    SELECT 
+                        l.LabTestID,
+                        l.PatientName,
+                        l.TestDate,
+                        l.TestTypeID,
+                        l.TechnicianID,
+                        l.SampleTypeID,
+                        t.Name AS TestType,
+                        tech.FirstName + ' ' + tech.LastName AS Technician,
+                        s.Description AS Sample,
+                        l.FinalPrice,
+                        l.ResultSummary
+                    FROM LabTestRecord l
+                    JOIN TestType t ON l.TestTypeID = t.TestTypeID
+                    JOIN Technician tech ON l.TechnicianID = tech.TechnicianID
+                    JOIN SampleType s ON l.SampleTypeID = s.SampleTypeID
+                ", con))
             {
                 DataTable dt = new DataTable();
                 new SqlDataAdapter(cmd).Fill(dt);
@@ -213,9 +230,11 @@ namespace DiagnosticLab
             HideTechnicalColumns();
         }
 
+        /// <summary>
+        /// Applies custom styles to the form and its controls.
+        /// </summary>
         private void ApplyStyle()
         {
-            // Основен фон на формата
             this.BackColor = ColorTranslator.FromHtml("#FFFBDE");
 
             foreach (Control ctrl in this.Controls)
@@ -245,7 +264,6 @@ namespace DiagnosticLab
                 }
             }
 
-            // Стилизация на DataGridView
             labTestRecordDataGridView.EnableHeadersVisualStyles = false;
             labTestRecordDataGridView.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#129990");
             labTestRecordDataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;

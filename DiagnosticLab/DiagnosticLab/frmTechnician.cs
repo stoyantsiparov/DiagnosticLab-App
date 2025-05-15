@@ -8,12 +8,18 @@ namespace DiagnosticLab
 {
     public partial class frmTechnician : Form
     {
+        /// <summary>
+        /// Initializes a new instance of the frmTechnician form and applies the style.
+        /// </summary>
         public frmTechnician()
         {
             InitializeComponent();
             ApplyStyle();
         }
 
+        /// <summary>
+        /// Handles the Load event of the frmTechnician form. Adds a new item to the binding source.
+        /// </summary>
         private void frmTechnician_Load(object sender, EventArgs e)
         {
             this.technicianBindingSource.AddNew();
@@ -21,6 +27,9 @@ namespace DiagnosticLab
 
         private string connectionString = "Data Source=OMEN\\SQLEXPRESS;Initial Catalog=DiagnosticLab;Integrated Security=True;TrustServerCertificate=True";
 
+        /// <summary>
+        /// Handles the Click event of the button1 control. Inserts a new technician into the database.
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             string firstName = firstNameTextBox.Text.Trim();
@@ -48,13 +57,15 @@ namespace DiagnosticLab
 
             MessageBox.Show("A new lab assistant has been added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            // Изчистване на полетата
             firstNameTextBox.Clear();
             lastNameTextBox.Clear();
             certificationTextBox.Clear();
             firstNameTextBox.Focus();
         }
 
+        /// <summary>
+        /// Applies custom styles to the form and its controls.
+        /// </summary>
         private void ApplyStyle()
         {
             this.BackColor = ColorTranslator.FromHtml("#FFFBDE");

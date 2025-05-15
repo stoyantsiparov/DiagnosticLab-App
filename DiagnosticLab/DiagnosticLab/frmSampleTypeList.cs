@@ -16,11 +16,17 @@ namespace DiagnosticLab
 
         private string connectionString = "Data Source=OMEN\\SQLEXPRESS;Initial Catalog=DiagnosticLab;Integrated Security=True;TrustServerCertificate=True";
 
+        /// <summary>
+        /// Handles the form load event and loads the sample types.
+        /// </summary>
         private void frmSampleTypeList_Load(object sender, EventArgs e)
         {
             LoadSampleTypes();
         }
 
+        /// <summary>
+        /// Handles cell click events in the DataGridView, specifically for deleting a sample type.
+        /// </summary>
         private void sampleTypeDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && sampleTypeDataGridView.Columns[e.ColumnIndex].Name == "Delete")
@@ -50,6 +56,9 @@ namespace DiagnosticLab
             }
         }
 
+        /// <summary>
+        /// Handles the update button click event to update the selected sample type.
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             if (sampleTypeDataGridView.CurrentRow != null)
@@ -84,6 +93,9 @@ namespace DiagnosticLab
             }
         }
 
+        /// <summary>
+        /// Loads the sample types from the database and binds them to the DataGridView.
+        /// </summary>
         private void LoadSampleTypes()
         {
             DataTable dt = new DataTable();
@@ -100,6 +112,9 @@ namespace DiagnosticLab
             sampleTypeDataGridView.DataSource = dt;
         }
 
+        /// <summary>
+        /// Applies custom styles to the form and its controls.
+        /// </summary>
         private void ApplyStyle()
         {
             this.BackColor = ColorTranslator.FromHtml("#FFFBDE");

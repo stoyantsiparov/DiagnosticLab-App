@@ -8,12 +8,18 @@ namespace DiagnosticLab
 {
     public partial class frmTestType : Form
     {
+        /// <summary>
+        /// Initializes a new instance of the frmTestType form and applies the style.
+        /// </summary>
         public frmTestType()
         {
             InitializeComponent();
             ApplyStyle();
         }
 
+        /// <summary>
+        /// Handles the Load event of the frmTestType form. Adds a new record to the binding source.
+        /// </summary>
         private void frmTestType_Load(object sender, EventArgs e)
         {
             this.testTypeBindingSource.AddNew();
@@ -21,6 +27,9 @@ namespace DiagnosticLab
 
         private string connectionString = "Data Source=OMEN\\SQLEXPRESS;Initial Catalog=DiagnosticLab;Integrated Security=True;TrustServerCertificate=True";
 
+        /// <summary>
+        /// Handles the Click event of the button1 control. Validates input and inserts a new test type into the database.
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             string name = nameTextBox.Text.Trim();
@@ -50,12 +59,14 @@ namespace DiagnosticLab
 
             MessageBox.Show("New test type added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            // Изчистване на полетата за нов запис
             nameTextBox.Clear();
             basePriceTextBox.Clear();
-            nameTextBox.Focus(); // Поставя курсора отново в полето за име
+            nameTextBox.Focus();
         }
 
+        /// <summary>
+        /// Applies custom styles to the form and its controls.
+        /// </summary>
         private void ApplyStyle()
         {
             this.BackColor = ColorTranslator.FromHtml("#FFFBDE");
