@@ -105,6 +105,12 @@ namespace DiagnosticLab
             frm.MdiParent = this;
             frm.Show();
         }
+
+        /// <summary>
+        /// Handles the click event for the Master Details menu item.
+        /// Opens the Technician Master-Details form as an MDI child of the MainForm.
+        /// </summary>
+
         private void masterDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var frm = new frmTechnicianMD();
