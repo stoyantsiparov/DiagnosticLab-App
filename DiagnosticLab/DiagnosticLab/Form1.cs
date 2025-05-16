@@ -13,6 +13,7 @@ namespace DiagnosticLab
         {
             InitializeComponent();
             ApplyStyle();
+            labTestRecordDataGridView.DataError += LabTestRecordDataGridView_DataError;
         }
 
         private string connectionString =
@@ -82,6 +83,16 @@ namespace DiagnosticLab
             labTestRecordDataGridView.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             labTestRecordDataGridView.DefaultCellStyle.BackColor = Color.White;
             labTestRecordDataGridView.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+        }
+
+        /// <summary>
+        /// Handles DataError events for the labTestRecordDataGridView.
+        /// Prevents exceptions from being thrown and cancels the error event.
+        /// </summary>
+        private void LabTestRecordDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.ThrowException = false;
+            e.Cancel = true;
         }
     }
 }
