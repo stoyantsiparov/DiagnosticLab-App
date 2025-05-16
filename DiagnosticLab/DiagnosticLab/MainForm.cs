@@ -106,6 +106,13 @@ namespace DiagnosticLab
             frm.Show();
         }
 
+        private void technicianDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new Form1();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
         /// <summary>
         /// Applies the specified color style to the form and its controls.
         /// </summary>

@@ -42,6 +42,8 @@
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.byOneParameterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.byMoreParametersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.masterDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.technicianDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +54,8 @@
             this.supportToolStripMenuItem,
             this.listToolStripMenuItem,
             this.recordsToolStripMenuItem,
-            this.searchToolStripMenuItem});
+            this.searchToolStripMenuItem,
+            this.masterDetailsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
@@ -163,6 +166,21 @@
             this.byMoreParametersToolStripMenuItem.Text = "By more parameters";
             this.byMoreParametersToolStripMenuItem.Click += new System.EventHandler(this.byMoreParametersToolStripMenuItem_Click);
             // 
+            // masterDetailsToolStripMenuItem
+            // 
+            this.masterDetailsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.technicianDetailsToolStripMenuItem});
+            this.masterDetailsToolStripMenuItem.Name = "masterDetailsToolStripMenuItem";
+            this.masterDetailsToolStripMenuItem.Size = new System.Drawing.Size(118, 24);
+            this.masterDetailsToolStripMenuItem.Text = "Master Details";
+            // 
+            // technicianDetailsToolStripMenuItem
+            // 
+            this.technicianDetailsToolStripMenuItem.Name = "technicianDetailsToolStripMenuItem";
+            this.technicianDetailsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.technicianDetailsToolStripMenuItem.Text = "Technician Details";
+            this.technicianDetailsToolStripMenuItem.Click += new System.EventHandler(this.technicianDetailsToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -196,5 +214,7 @@
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem byOneParameterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem byMoreParametersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem masterDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem technicianDetailsToolStripMenuItem;
     }
 }
