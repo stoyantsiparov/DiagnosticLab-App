@@ -216,7 +216,31 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\testType_optimized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Support_Icon_Optimized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lab_icon_optimized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sampletype_optimized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lists_Icon_Uniform1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Records_Icon_Optimized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labMD_Optimized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search_Icon_Optimized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchMore_Icon_Optimized.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

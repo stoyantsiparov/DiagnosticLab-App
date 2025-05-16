@@ -67,28 +67,32 @@
             this.testTToolStripMenuItem,
             this.technicianToolStripMenuItem,
             this.sampleTypeToolStripMenuItem});
+            this.supportToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("supportToolStripMenuItem.Image")));
             this.supportToolStripMenuItem.Name = "supportToolStripMenuItem";
             this.supportToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
             this.supportToolStripMenuItem.Text = "Support";
             // 
             // testTToolStripMenuItem
             // 
+            this.testTToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("testTToolStripMenuItem.Image")));
             this.testTToolStripMenuItem.Name = "testTToolStripMenuItem";
-            this.testTToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.testTToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.testTToolStripMenuItem.Text = "TestType";
             this.testTToolStripMenuItem.Click += new System.EventHandler(this.testTypeToolStripMenuItem_Click);
             // 
             // technicianToolStripMenuItem
             // 
+            this.technicianToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("technicianToolStripMenuItem.Image")));
             this.technicianToolStripMenuItem.Name = "technicianToolStripMenuItem";
-            this.technicianToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.technicianToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.technicianToolStripMenuItem.Text = "Technician";
             this.technicianToolStripMenuItem.Click += new System.EventHandler(this.technicianToolStripMenuItem_Click);
             // 
             // sampleTypeToolStripMenuItem
             // 
+            this.sampleTypeToolStripMenuItem.Image = global::DiagnosticLab.Properties.Resources.sampletype_optimized;
             this.sampleTypeToolStripMenuItem.Name = "sampleTypeToolStripMenuItem";
-            this.sampleTypeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.sampleTypeToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.sampleTypeToolStripMenuItem.Text = "SampleType";
             this.sampleTypeToolStripMenuItem.Click += new System.EventHandler(this.sampleTypeToolStripMenuItem_Click);
             // 
@@ -98,33 +102,38 @@
             this.testTypeToolStripMenuItem,
             this.technicianToolStripMenuItem1,
             this.sampleTypeToolStripMenuItem1});
+            this.listToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("listToolStripMenuItem.Image")));
             this.listToolStripMenuItem.Name = "listToolStripMenuItem";
             this.listToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.listToolStripMenuItem.Text = "Lists";
             // 
             // testTypeToolStripMenuItem
             // 
+            this.testTypeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("testTypeToolStripMenuItem.Image")));
             this.testTypeToolStripMenuItem.Name = "testTypeToolStripMenuItem";
-            this.testTypeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.testTypeToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.testTypeToolStripMenuItem.Text = "TestType";
             this.testTypeToolStripMenuItem.Click += new System.EventHandler(this.testTypeToolStripMenuItem_Click_1);
             // 
             // technicianToolStripMenuItem1
             // 
+            this.technicianToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("technicianToolStripMenuItem1.Image")));
             this.technicianToolStripMenuItem1.Name = "technicianToolStripMenuItem1";
-            this.technicianToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.technicianToolStripMenuItem1.Size = new System.Drawing.Size(173, 26);
             this.technicianToolStripMenuItem1.Text = "Technician";
             this.technicianToolStripMenuItem1.Click += new System.EventHandler(this.technicianToolStripMenuItem1_Click);
             // 
             // sampleTypeToolStripMenuItem1
             // 
+            this.sampleTypeToolStripMenuItem1.Image = global::DiagnosticLab.Properties.Resources.sampletype_optimized;
             this.sampleTypeToolStripMenuItem1.Name = "sampleTypeToolStripMenuItem1";
-            this.sampleTypeToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.sampleTypeToolStripMenuItem1.Size = new System.Drawing.Size(173, 26);
             this.sampleTypeToolStripMenuItem1.Text = "SampleType";
             this.sampleTypeToolStripMenuItem1.Click += new System.EventHandler(this.sampleTypeToolStripMenuItem1_Click);
             // 
             // recordsToolStripMenuItem
             // 
+            this.recordsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("recordsToolStripMenuItem.Image")));
             this.recordsToolStripMenuItem.Name = "recordsToolStripMenuItem";
             this.recordsToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
             this.recordsToolStripMenuItem.Text = "Records";
@@ -132,6 +141,7 @@
             // 
             // masterDetailsToolStripMenuItem
             // 
+            this.masterDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("masterDetailsToolStripMenuItem.Image")));
             this.masterDetailsToolStripMenuItem.Name = "masterDetailsToolStripMenuItem";
             this.masterDetailsToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
             this.masterDetailsToolStripMenuItem.Text = "Technician MD";
@@ -142,12 +152,14 @@
             this.searchToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.byOneParameterToolStripMenuItem,
             this.byMoreParametersToolStripMenuItem});
+            this.searchToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("searchToolStripMenuItem.Image")));
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
             this.searchToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
             this.searchToolStripMenuItem.Text = "Search";
             // 
             // byOneParameterToolStripMenuItem
             // 
+            this.byOneParameterToolStripMenuItem.Image = global::DiagnosticLab.Properties.Resources.SearchMore_Icon_Optimized;
             this.byOneParameterToolStripMenuItem.Name = "byOneParameterToolStripMenuItem";
             this.byOneParameterToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
             this.byOneParameterToolStripMenuItem.Text = "By one parameter";
@@ -155,6 +167,7 @@
             // 
             // byMoreParametersToolStripMenuItem
             // 
+            this.byMoreParametersToolStripMenuItem.Image = global::DiagnosticLab.Properties.Resources.SearchMore_Icon_Optimized;
             this.byMoreParametersToolStripMenuItem.Name = "byMoreParametersToolStripMenuItem";
             this.byMoreParametersToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
             this.byMoreParametersToolStripMenuItem.Text = "By more parameters";

@@ -118,4 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="labMD_Optimized" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\labMD_Optimized.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="testType_optimized" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\testType_optimized.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lists_Icon_Uniform" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lists_Icon_Uniform1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sampletype_optimized" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sampletype_optimized.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Records_Icon_Optimized" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Records_Icon_Optimized.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Search_Icon_Optimized" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search_Icon_Optimized.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Support_Icon_Optimized" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Support_Icon_Optimized.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lab_icon_optimized" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lab_icon_optimized.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SearchMore_Icon_Optimized" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SearchMore_Icon_Optimized.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
