@@ -74,9 +74,9 @@
             // 
             // testTToolStripMenuItem
             // 
-            this.testTToolStripMenuItem.Image = global::DiagnosticLab.Properties.Resources.ChatGPT_Image_15_05_2025_г___23_35_47;
+            this.testTToolStripMenuItem.Image = global::DiagnosticLab.Properties.Resources.testType;
             this.testTToolStripMenuItem.Name = "testTToolStripMenuItem";
-            this.testTToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.testTToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.testTToolStripMenuItem.Text = "TestType";
             this.testTToolStripMenuItem.Click += new System.EventHandler(this.testTypeToolStripMenuItem_Click);
             // 
@@ -84,7 +84,7 @@
             // 
             this.technicianToolStripMenuItem.Image = global::DiagnosticLab.Properties.Resources.лаб;
             this.technicianToolStripMenuItem.Name = "technicianToolStripMenuItem";
-            this.technicianToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.technicianToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.technicianToolStripMenuItem.Text = "Technician";
             this.technicianToolStripMenuItem.Click += new System.EventHandler(this.technicianToolStripMenuItem_Click);
             // 
@@ -92,7 +92,7 @@
             // 
             this.sampleTypeToolStripMenuItem.Image = global::DiagnosticLab.Properties.Resources.sampletype;
             this.sampleTypeToolStripMenuItem.Name = "sampleTypeToolStripMenuItem";
-            this.sampleTypeToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.sampleTypeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.sampleTypeToolStripMenuItem.Text = "SampleType";
             this.sampleTypeToolStripMenuItem.Click += new System.EventHandler(this.sampleTypeToolStripMenuItem_Click);
             // 
@@ -109,9 +109,9 @@
             // 
             // testTypeToolStripMenuItem
             // 
-            this.testTypeToolStripMenuItem.Image = global::DiagnosticLab.Properties.Resources.ChatGPT_Image_15_05_2025_г___23_35_47;
+            this.testTypeToolStripMenuItem.Image = global::DiagnosticLab.Properties.Resources.testType;
             this.testTypeToolStripMenuItem.Name = "testTypeToolStripMenuItem";
-            this.testTypeToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.testTypeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.testTypeToolStripMenuItem.Text = "TestType";
             this.testTypeToolStripMenuItem.Click += new System.EventHandler(this.testTypeToolStripMenuItem_Click_1);
             // 
@@ -119,7 +119,7 @@
             // 
             this.technicianToolStripMenuItem1.Image = global::DiagnosticLab.Properties.Resources.лаб;
             this.technicianToolStripMenuItem1.Name = "technicianToolStripMenuItem1";
-            this.technicianToolStripMenuItem1.Size = new System.Drawing.Size(173, 26);
+            this.technicianToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.technicianToolStripMenuItem1.Text = "Technician";
             this.technicianToolStripMenuItem1.Click += new System.EventHandler(this.technicianToolStripMenuItem1_Click);
             // 
@@ -127,7 +127,7 @@
             // 
             this.sampleTypeToolStripMenuItem1.Image = global::DiagnosticLab.Properties.Resources.sampletype;
             this.sampleTypeToolStripMenuItem1.Name = "sampleTypeToolStripMenuItem1";
-            this.sampleTypeToolStripMenuItem1.Size = new System.Drawing.Size(173, 26);
+            this.sampleTypeToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.sampleTypeToolStripMenuItem1.Text = "SampleType";
             this.sampleTypeToolStripMenuItem1.Click += new System.EventHandler(this.sampleTypeToolStripMenuItem1_Click);
             // 
@@ -141,7 +141,7 @@
             // 
             // masterDetailsToolStripMenuItem
             // 
-            this.masterDetailsToolStripMenuItem.Image = global::DiagnosticLab.Properties.Resources.лаб;
+            this.masterDetailsToolStripMenuItem.Image = global::DiagnosticLab.Properties.Resources.labMD;
             this.masterDetailsToolStripMenuItem.Name = "masterDetailsToolStripMenuItem";
             this.masterDetailsToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
             this.masterDetailsToolStripMenuItem.Text = "Technician MD";

@@ -155,6 +155,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="DiagnosticLabDataSet.xsc">
       <DependentUpon>DiagnosticLabDataSet.xsd</DependentUpon>
@@ -227,9 +228,6 @@
     <None Include="Resources\Search_Icon_Uniform.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ChatGPT Image 15.05.2025 г., 23_35_47.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\лаб.png" />
   </ItemGroup>
   <ItemGroup>
@@ -237,6 +235,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labMD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\testType.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

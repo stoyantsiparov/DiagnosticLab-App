@@ -63,9 +63,9 @@ namespace DiagnosticLab.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ChatGPT_Image_15_05_2025_г___23_35_47 {
+        internal static System.Drawing.Bitmap labMD {
             get {
-                object obj = ResourceManager.GetObject("ChatGPT Image 15.05.2025 г., 23_35_47", resourceCulture);
+                object obj = ResourceManager.GetObject("labMD", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +126,16 @@ namespace DiagnosticLab.Properties {
         internal static System.Drawing.Bitmap Support_Icon_Uniform {
             get {
                 object obj = ResourceManager.GetObject("Support_Icon_Uniform", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap testType {
+            get {
+                object obj = ResourceManager.GetObject("testType", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
