@@ -105,10 +105,9 @@ namespace DiagnosticLab
             frm.MdiParent = this;
             frm.Show();
         }
-
-        private void technicianDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void masterDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var frm = new Form1();
+            var frm = new frmTechnicianMD();
             frm.MdiParent = this;
             frm.Show();
         }
